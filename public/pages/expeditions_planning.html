@@ -1,0 +1,102 @@
+<!DOCTYPE html><!-- if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7(lang="en")--><!-- if IE 7html.no-js.lt-ie9.lt-ie8(lang="en")--><!-- if IE 8html.no-js.lt-ie9(lang="en")--><!--if gt IE 8| [if gt IE 8]--><html lang="en" class="no-js"><!-- <![endif]--><head><meta charset="utf-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><title></title><meta content="" name="description"><meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script><window class="brunch">= window.brunch || {};<\\/window></script><link href="../css/font-awesome.css" rel="stylesheet"><link href="../css/vendor.css" rel="stylesheet"><link href="../css/app.css" rel="stylesheet"><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl3hDHGkv8Ohrz_AY7vlWRNSB_W5Esa9M&amp;sensor=false&amp;extension=.js"> </script><script src="/maplabel.js"> </script></head><body><div id="enquire-modal" style="display:none;"><div class="logo"><img src="../images/sprite/logo.svg" alt="Equinoxe-Logo"></div><div class="clear"></div><form class="form-horizontal"><fieldset><!-- Text input--><div class="control-group name"><label for="textinput" class="control-label">Name</label><div class="controls"><input id="textinput" name="textinput" type="text" placeholder="Marc" required="" class="input-xlarge"></div></div><!-- Text input--><div class="control-group surname"><label for="textinput" class="control-label">Surname</label><div class="controls"><input id="textinput" name="textinput" type="text" placeholder="Rosenberg" required="" class="input-xlarge"></div></div><!-- Multiple Checkboxes--><div class="control-group checkboxes"><label for="checkboxes" class="control-label">Service</label><div class="controls"><label for="checkboxes-0" class="checkbox"><input id="checkboxes-0" type="checkbox" name="checkboxes" value="Yacht Charter">Yacht Charter</label><label for="checkboxes-1" class="checkbox"><input id="checkboxes-1" type="checkbox" name="checkboxes" value="Yacht Sale">Yacht Sale</label><label for="checkboxes-2" class="checkbox"><input id="checkboxes-2" type="checkbox" name="checkboxes" value="Yacht Purchase">Yacht Purchase</label><label for="checkboxes-3" class="checkbox"><input id="checkboxes-3" type="checkbox" name="checkboxes" value="Expeditions">Expeditions</label><label for="checkboxes-4" class="checkbox"><input id="checkboxes-4" type="checkbox" name="checkboxes" value="Bareboat">Bareboat</label></div></div><!-- Text input--><div class="control-group phonenum"><label for="textinput" class="control-label">Phone Number</label><div class="controls"><input id="textinput" name="textinput" type="text" placeholder="placeholder" required="" class="input-xlarge"></div></div><!-- Text input--><div class="control-group mail"><label for="textinput" class="control-label">Email</label><div class="controls"><input id="textinput" name="textinput" type="text" placeholder="johnappleseed@yahoo.it" required="" class="input-xlarge"></div></div><!-- Textarea--><div class="control-group text-area"><label for="textarea" class="control-label">Message</label><div class="controls"><textarea id="textarea" placeholder="Your message" name="textarea"></textarea></div></div><!-- Button --><div class="control-group submit"><div class="controls"><input type="submit" value="Submit"></div></div></fieldset></form></div><div id="landing-menu" class="subMenu"><a id="simple-menu" href="#sidr">Menu</a></div><div id="sidr"><!-- Your content--><a id="closeMenu" href="#"><img src="../images/sprite/hamburger_close.svg" alt="close"></a><div id="side-menu-logo"><img src="../images/sprite/logo.svg" alt="Equinoxe-Logo"></div><ul><li><a href="/pages/landing.html">Home</a></li><li><a href="/pages/yacht_charter.html">Yacht</br>Charter</a></li><li class="active"><a href="/pages/yacht_brokerage.html">Yacht</br>Brokerage</a></li><li><a href="/pages/yacht_purchase.html">Yacht</br>Purchase</a></li><li><a href="/pages/bareboat.html">Bareboat</a></li><li><a href="/pages/expeditions_planning.html">Expedition</br>Planning</a></li><li><a href="/pages/services.html">Services</a></li><li><a href="/pages/heritage.html">Heritage</a></li><li><a href="#enquire-modal" rel="modal:open" class="enquire-button">Enquire</a></li></ul></div><div id="onepage" data-anchor="sale-purchase"><div data-image="/images/landing/desert1.jpg" class="img-holder"><section class="center-parallax"></section></div><div class="section"><section class="center"><div class="main-text"><h1> Expeditions Planning</h1><p>We believe that travelers don&#8217;t want to be passive tourists, so our expeditions foster active engagement.</p></div><div class="clear"></div><a href="../pages/expeditions.html" class="button">View All Expeditions</a></section></div><div class="bottom-spacer"></div><div class="section"><section class="center"><div class="quote"><p>"I can't change the direction of the wind, but I can adjust my sails to always reach my destination."</p><p class="author">Jimmy Dean</p></div></section></div><div class="bottom-spacer"></div><div class="section inner-map"><script>// This example creates circles on the map, representing
+// populations in North America.
+
+// First, create an object containing LatLng and population for each city.
+var citymap = {};
+citymap['chicago'] = {
+  center: new google.maps.LatLng(41.878113, -87.629798),
+  text: new google.maps.LatLng(43.328113, -87.629798),
+  population: 2714856,
+  name: "1"
+};
+citymap['newyork'] = {
+  center: new google.maps.LatLng(40.714352, -74.005973),
+  text: new google.maps.LatLng(42.164352, -74.005973),
+  population: 8405837,
+  name: "6"
+};
+citymap['losangeles'] = {
+  center: new google.maps.LatLng(34.052234, -118.243684),
+  text: new google.maps.LatLng(35.502234, -118.243684),
+  population: 3857799,
+  name: "3"
+};
+citymap['vancouver'] = {
+  center: new google.maps.LatLng(49.25, -123.1),
+  text: new google.maps.LatLng(51, -123.1),
+  population: 603502,
+  name: "13"
+};
+
+var cityCircle;
+
+google.maps.event.addDomListener(window, 'load', init);
+var map;
+function init() {
+      var mapOptions = {
+            center: new google.maps.LatLng(40.714352, -74.005973),
+            zoom: 3,
+            zoomControl: false,
+            disableDoubleClickZoom: true,
+            mapTypeControl: false,
+            scaleControl: false,
+            scrollwheel: false,
+            panControl: false,
+            streetViewControl: false,
+            draggable : true,
+            overviewMapControl: false,
+            overviewMapControlOptions: {
+            opened: false,
+      },
+      mapTypeId: google.maps.MapTypeId.SATELLITE,
+}
+var mapElement = document.getElementById('expedition-map');
+var map = new google.maps.Map(mapElement, mapOptions);
+var locations = [];
+// Construct the circle for each value in citymap.
+// Note: We scale the area of the circle based on the population.
+for (var city in citymap) {
+      var mapLabel = new MapLabel({
+           text: citymap[city].name,
+           position: citymap[city].text,
+           map: map,
+           fontSize:26,
+           fontColor: "#F4BB3B",
+           strokeWeight: 0,
+           fontFamily: "Alegreya Sans",
+           align: 'center'
+         });
+      var populationOptions = {
+            strokeColor: '#F4BB3B',
+            strokeOpacity: 1,
+            strokeWeight: 5,
+            fillColor: '#F4BB3B',
+            fillOpacity: 0,
+            map: map,
+            center: citymap[city].center,
+            radius: Math.sqrt(citymap[city].population) * 500
+      };
+      // Add the circle for this city to the map.
+      cityCircle = new google.maps.Circle(populationOptions);
+}
+
+for (i = 0; i < locations.length; i++) {
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+      if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+      if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+      marker = new google.maps.Marker({
+            icon: markericon,
+            position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+            map: map,
+            title: locations[i][0],
+            desc: description,
+            tel: telephone,
+            email: email,
+            web: web
+      });
+      link = '';     
+      }
+}
+</script><div id="expedition-map" class="map"></div></div></div><script src="../js/app.js"> </script></body></html>
