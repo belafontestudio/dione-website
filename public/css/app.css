@@ -1830,6 +1830,7 @@ section.center-parallax ul#intro-menu {
   width: 100%;
   margin-left: 0%;
   margin-right: 3%;
+  margin-bottom: 60px;
 }
 section.center ul#intro-menu:before,
 section.center-parallax ul#intro-menu:before,
@@ -1888,10 +1889,10 @@ section.center-parallax div.main-text:last-child {
 }
 section.center div.main-text h1,
 section.center-parallax div.main-text h1 {
-  font-size: 105px;
-  font-size: 6.5625rem;
-  line-height: 93px;
-  line-height: 5.8125rem;
+  font-size: 71px;
+  font-size: 4.4375rem;
+  line-height: 65px;
+  line-height: 4.0625rem;
 }
 section.center div.main-text p,
 section.center-parallax div.main-text p {
@@ -1903,13 +1904,50 @@ section.center-parallax div.main-text p {
   font-weight: 300;
   margin: 0;
 }
+section.center div.main-text.home h1,
+section.center-parallax div.main-text.home h1 {
+  margin-bottom: 44px;
+}
+section.center div.main-text.home p,
+section.center-parallax div.main-text.home p {
+  margin-bottom: 40px;
+}
+section.center div.main-text.home p.subtitle,
+section.center-parallax div.main-text.home p.subtitle {
+  margin-bottom: 20px;
+}
+section.center div.main-text.home hr.line-spacer,
+section.center-parallax div.main-text.home hr.line-spacer {
+  width: 98%;
+  height: 1px;
+  border: none;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
+  clear: both;
+  display: inline-block;
+}
+section.center div.main-text.home p.length,
+section.center-parallax div.main-text.home p.length {
+  font-family: 'futura_bqregular', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+section.center div.main-text.home p.length span,
+section.center-parallax div.main-text.home p.length span {
+  font-size: 44px;
+  padding: 0 10%;
+}
 section.center a.button,
 section.center-parallax a.button {
   position: relative;
   clear: both;
   display: inline-block;
   margin: 0;
-  padding: 9px 40px;
+  padding: 9px 24px;
   background-color: #9dd2cc;
   font-size: 13px;
   font-size: 0.8125rem;
@@ -2897,7 +2935,7 @@ section.center-parallax div.filter-opened-section:last-child {
     margin-left: 0%;
     margin-right: 3%;
     position: relative;
-    left: 25.75%;
+    left: 17.1666666666667%;
     padding-top: 15px;
     position: relative;
   }
@@ -2931,7 +2969,7 @@ section.center-parallax div.filter-opened-section:last-child {
     margin-left: 0%;
     margin-right: 3%;
     position: relative;
-    left: 25.75%;
+    left: 17.1666666666667%;
     border-left: 1px solid #fff;
     padding-left: 30px;
   }
@@ -2949,6 +2987,13 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center div.main-text:last-child,
   section.center-parallax div.main-text:last-child {
     margin-right: 0%;
+  }
+  section.center div.main-text h1,
+  section.center-parallax div.main-text h1 {
+    font-size: 105px;
+    font-size: 6.5625rem;
+    line-height: 93px;
+    line-height: 5.8125rem;
   }
   section.center div.main-text.home,
   section.center-parallax div.main-text.home {
@@ -3015,26 +3060,10 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center div.main-text.home p.subtitle,
   section.center-parallax div.main-text.home p.subtitle {
-    margin-bottom: 30px;
-  }
-  section.center div.main-text.home hr.line-spacer,
-  section.center-parallax div.main-text.home hr.line-spacer {
-    width: 98%;
-    height: 1px;
-    border: none;
-    background-color: #fff;
-    margin: 0 auto;
-    margin-bottom: 24px;
-    position: relative;
-    clear: both;
-    display: inline-block;
+    margin-bottom: 40px;
   }
   section.center div.main-text.home p.length,
   section.center-parallax div.main-text.home p.length {
-    font-family: 'futura_bqregular', sans-serif;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 2px;
     *zoom: 1;
     float: left;
     clear: none;
@@ -3063,8 +3092,7 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center div.main-text.home p.length span,
   section.center-parallax div.main-text.home p.length span {
-    font-size: 44px;
-    padding: 0 25%;
+    padding: 0 18%;
   }
   section.center p.call-to-action,
   section.center-parallax p.call-to-action {
