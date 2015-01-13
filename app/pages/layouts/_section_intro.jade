@@ -1,5 +1,19 @@
 block section
   section.center
+    block menu-list
+      ul#intro-menu
+        li
+          block first-list-item
+            | first button
+        li
+          block second-list-item
+            | first button
+        li
+          block third-list-item
+            | first button
+        li
+          block fourth-list-item
+            | first button
     .main-text
       h1 
         block title
@@ -7,31 +21,3 @@ block section
       p
         block description
           | the description
-    block explain-call
-      p.call-to-action
-        block explain-call-text
-          | Call to action text
-    .clear
-    block call-to-action
-      ul#call-to-action-menu
-        li
-          block first-call-to-action
-            block first-icon
-              img
-            a(href="#") 
-              block first-button
-                | text button
-        li
-          block second-call-to-action
-            block second-icon
-              img
-            a(href="#")
-              block second-button
-                | text button
-        li
-          block third-call-to-action
-            block third-icon
-             img
-            a(href="#")
-              block third-button
-                | text button

@@ -1,4 +1,12 @@
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500");
+@import url("http://fonts.googleapis.com/css?family=Gentium+Book+Basic");
+@font-face {
+  font-family: 'futura_bqregular';
+  src: url("./public/fonts/Futura Demi/futurabq-demibold-webfont.eot");
+  src: url("./public/fonts/Futura Demi/futurabq-demibold-webfont.eot?#iefix") format('embedded-opentype'), url("./public/fonts/Futura Demi/futurabq-demibold-webfont.woff2") format('woff2'), url("./public/fonts/Futura Demi/futurabq-demibold-webfont.woff") format('woff'), url("./public/fonts/Futura Demi/futurabq-demibold-webfont.ttf") format('truetype'), url("./public/fonts/Futura Demi/futurabq-demibold-webfont.svg#futura_bqregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -11,7 +19,7 @@ body {
 }
 body,
 input {
-  font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Gentium Book Basic', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
 }
@@ -41,6 +49,13 @@ input ul li {
 body .uppercase,
 input .uppercase {
   text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: 'futura_bqregular', sans-serif;
 }
 div#landing-menu {
   position: absolute;
@@ -114,7 +129,7 @@ a#closeMenu:hover {
   overflow-y: auto;
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
-  background: #f4bb3b;
+  background: #9dd2cc;
   color: #fff;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -255,7 +270,7 @@ div#side-menu-logo img {
 }
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
-  background: #f4bb3b;
+  background: #fff;
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -263,7 +278,7 @@ div#side-menu-logo img {
   left: 2px;
   width: 8px;
   height: 8px;
-  border: 1px solid #f4bb3b;
+  border: 1px solid #fff;
   background: rgba(0,0,0,0);
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -271,13 +286,13 @@ div#side-menu-logo img {
   z-index: 1;
 }
 #slide1 {
-  background-image: url("/images/landing/charter.jpg");
+  background-image: url("/images/landing/Intro_Decks.jpg");
 }
 #slide5 {
-  background-image: url("/images/landing/charter2.jpg");
+  background-image: url("/images/landing/Intro_Cabines.jpg");
 }
 #slide10 {
-  background-image: url("/images/landing/alaska4.jpg");
+  background-image: url("/images/landing/Intro_Specs.jpg");
 }
 #slide12 {
   background-image: url("/images/landing/bareboat.jpg");
@@ -323,7 +338,7 @@ div#side-menu-logo img {
 }
 .modal {
   width: 800px;
-  background: #f4bb3b;
+  background: #9dd2cc;
   padding: 30px 60px;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -955,13 +970,6 @@ p.more-info {
   line-height: 2.5rem !important;
   font-weight: bold;
 }
-div#container-other-specs a.button {
-  left: 0;
-  margin: 30px 0 60px 0;
-}
-div#container-other-specs ul#single-yacht-specs li {
-  color: #f4bb3b;
-}
 div.bottom-spacer {
   position: relative;
   display: inline-block;
@@ -1039,13 +1047,6 @@ div.bg-img-slide {
   -moz-background-size: cover;
   background-size: cover;
 }
-div#container-other-specs .main-text {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  margin: 0;
-  margin-top: -120px;
-}
 a#simple-menu {
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
@@ -1063,7 +1064,7 @@ a#simple-menu {
   top: 0;
   left: 0;
   padding: 22px;
-  background-color: #f4bb3b;
+  background-color: #9dd2cc;
 }
 .fast-hide {
   opacity: 0;
@@ -1629,24 +1630,6 @@ section.center-parallax ul#yacht-size-mobile li p.description-text {
   font-weight: lighter;
   margin-top: 30px;
 }
-section.center ul#yacht-size li a.button,
-section.center-parallax ul#yacht-size li a.button,
-section.center ul#latest-yachts li a.button,
-section.center-parallax ul#latest-yachts li a.button,
-section.center ul#yachts-list-grid li a.button,
-section.center-parallax ul#yachts-list-grid li a.button,
-section.center ul#filter-menu li a.button,
-section.center-parallax ul#filter-menu li a.button,
-section.center ul#yacht-size-mobile li a.button,
-section.center-parallax ul#yacht-size-mobile li a.button {
-  width: 70%;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-  text-transform: uppercase;
-  left: 0;
-}
 section.center ul#yachts-list-grid,
 section.center-parallax ul#yachts-list-grid,
 section.center ul#filter-menu,
@@ -1837,8 +1820,46 @@ section.center ul#latest-yachts-imgbackground,
 section.center-parallax ul#latest-yachts-imgbackground {
   display: none;
 }
+section.center ul#intro-menu,
+section.center-parallax ul#intro-menu {
+  position: relative;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+section.center ul#intro-menu:before,
+section.center-parallax ul#intro-menu:before,
+section.center ul#intro-menu:after,
+section.center-parallax ul#intro-menu:after {
+  content: '';
+  display: table;
+}
+section.center ul#intro-menu:after,
+section.center-parallax ul#intro-menu:after {
+  clear: both;
+}
+section.center ul#intro-menu:last-child,
+section.center-parallax ul#intro-menu:last-child {
+  margin-right: 0%;
+}
+section.center ul#intro-menu li,
+section.center-parallax ul#intro-menu li {
+  position: relative;
+  float: left;
+  margin-bottom: 4px;
+  margin-right: 4px;
+}
+section.center ul#intro-menu li a.button,
+section.center-parallax ul#intro-menu li a.button {
+  width: 100%;
+}
 section.center div.main-text,
 section.center-parallax div.main-text {
+  position: relative;
   *zoom: 1;
   float: left;
   clear: none;
@@ -1848,6 +1869,7 @@ section.center-parallax div.main-text {
   margin-right: 3%;
   margin-top: 50px;
   margin-bottom: 30px;
+  margin: 0;
 }
 section.center div.main-text:before,
 section.center-parallax div.main-text:before,
@@ -1864,20 +1886,22 @@ section.center div.main-text:last-child,
 section.center-parallax div.main-text:last-child {
   margin-right: 0%;
 }
-section.center div.main-text.home,
-section.center-parallax div.main-text.home {
-  margin-top: 40px;
-  position: relative;
-  text-align: center;
+section.center div.main-text h1,
+section.center-parallax div.main-text h1 {
+  font-size: 105px;
+  font-size: 6.5625rem;
+  line-height: 93px;
+  line-height: 5.8125rem;
 }
-section.center div.main-text.home p,
-section.center-parallax div.main-text.home p {
-  font-size: 19px;
-  font-size: 1.1875rem;
-  line-height: 26px;
-  line-height: 1.625rem;
-  position: absolute;
-  top: 0;
+section.center div.main-text p,
+section.center-parallax div.main-text p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 0;
 }
 section.center a.button,
 section.center-parallax a.button {
@@ -1885,19 +1909,18 @@ section.center-parallax a.button {
   clear: both;
   display: inline-block;
   margin: 0;
-  padding: 15px 50px;
-  border: 2px solid #f4bb3b;
+  padding: 9px 40px;
+  background-color: #9dd2cc;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 15px;
+  line-height: 0.9375rem;
 }
 section.center a.button:hover,
 section.center-parallax a.button:hover {
-  background-color: #f4bb3b;
-}
-section.center a.button.home,
-section.center-parallax a.button.home {
-  position: relative;
-  top: 50px;
-  left: 50%;
-  margin-left: -80px;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
 }
 section.center div.quote,
 section.center-parallax div.quote {
@@ -2193,14 +2216,6 @@ section.center div.reset-button:last-child,
 section.center-parallax div.reset-button:last-child {
   margin-right: 0%;
 }
-section.center div.reset-button a.button,
-section.center-parallax div.reset-button a.button {
-  text-align: center;
-  width: 144px;
-  margin-left: -72px;
-  left: 50%;
-  border: none;
-}
 section.center div.filter-opened-section,
 section.center-parallax div.filter-opened-section {
   *zoom: 1;
@@ -2351,10 +2366,6 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center:after,
   section.center-parallax:after {
     clear: both;
-  }
-  section.center div.main-text.home,
-  section.center-parallax div.main-text.home {
-    margin-top: 50px;
   }
   section.center div.logo,
   section.center-parallax div.logo {
@@ -2699,12 +2710,6 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center-parallax:after {
     clear: both;
   }
-  section.center div.main-text.home,
-  section.center-parallax div.main-text.home {
-    margin-top: 60px;
-    position: relative;
-    left: 25.75%;
-  }
   section.center div.logo,
   section.center-parallax div.logo {
     *zoom: 1;
@@ -2882,17 +2887,53 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center-parallax ul#call-to-action-menu li:last-child {
     margin-right: 0%;
   }
+  section.center ul#intro-menu,
+  section.center-parallax ul#intro-menu {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 14.166666666666702%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 25.75%;
+    padding-top: 15px;
+    position: relative;
+  }
+  section.center ul#intro-menu:before,
+  section.center-parallax ul#intro-menu:before,
+  section.center ul#intro-menu:after,
+  section.center-parallax ul#intro-menu:after {
+    content: '';
+    display: table;
+  }
+  section.center ul#intro-menu:after,
+  section.center-parallax ul#intro-menu:after {
+    clear: both;
+  }
+  section.center ul#intro-menu:last-child,
+  section.center-parallax ul#intro-menu:last-child {
+    margin-right: 0%;
+  }
+  section.center ul#intro-menu li,
+  section.center-parallax ul#intro-menu li {
+    width: 100%;
+    margin-right: 0;
+  }
   section.center div.main-text,
   section.center-parallax div.main-text {
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
-    width: 48.5%;
+    width: 31.3333333333333%;
     margin-left: 0%;
     margin-right: 3%;
     position: relative;
-    left: 17.1666666666667%;
+    left: 25.75%;
+    border-left: 1px solid #fff;
+    padding-left: 30px;
   }
   section.center div.main-text:before,
   section.center-parallax div.main-text:before,
@@ -2909,38 +2950,121 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center-parallax div.main-text:last-child {
     margin-right: 0%;
   }
-  section.center div.main-text.left,
-  section.center-parallax div.main-text.left {
+  section.center div.main-text.home,
+  section.center-parallax div.main-text.home {
+    position: relative;
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
-    width: 31.3333333333333%;
+    width: 65.6666666666667%;
     margin-left: 0%;
     margin-right: 3%;
     position: relative;
-    left: 0%;
-    margin-left: 40px;
+    left: 17.1666666666667%;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 30px 0;
   }
-  section.center div.main-text.left:before,
-  section.center-parallax div.main-text.left:before,
-  section.center div.main-text.left:after,
-  section.center-parallax div.main-text.left:after {
+  section.center div.main-text.home:before,
+  section.center-parallax div.main-text.home:before,
+  section.center div.main-text.home:after,
+  section.center-parallax div.main-text.home:after {
     content: '';
     display: table;
   }
-  section.center div.main-text.left:after,
-  section.center-parallax div.main-text.left:after {
+  section.center div.main-text.home:after,
+  section.center-parallax div.main-text.home:after {
     clear: both;
   }
-  section.center div.main-text.left:last-child,
-  section.center-parallax div.main-text.left:last-child {
+  section.center div.main-text.home:last-child,
+  section.center-parallax div.main-text.home:last-child {
     margin-right: 0%;
   }
-  section.center a.button,
-  section.center-parallax a.button {
+  section.center div.main-text.home h1,
+  section.center-parallax div.main-text.home h1 {
+    margin-bottom: 44px;
+  }
+  section.center div.main-text.home p,
+  section.center-parallax div.main-text.home p {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
     position: relative;
-    left: 17.1666666666667%;
+    left: 25.75%;
+    margin-bottom: 60px;
+  }
+  section.center div.main-text.home p:before,
+  section.center-parallax div.main-text.home p:before,
+  section.center div.main-text.home p:after,
+  section.center-parallax div.main-text.home p:after {
+    content: '';
+    display: table;
+  }
+  section.center div.main-text.home p:after,
+  section.center-parallax div.main-text.home p:after {
+    clear: both;
+  }
+  section.center div.main-text.home p:last-child,
+  section.center-parallax div.main-text.home p:last-child {
+    margin-right: 0%;
+  }
+  section.center div.main-text.home p.subtitle,
+  section.center-parallax div.main-text.home p.subtitle {
+    margin-bottom: 30px;
+  }
+  section.center div.main-text.home hr.line-spacer,
+  section.center-parallax div.main-text.home hr.line-spacer {
+    width: 98%;
+    height: 1px;
+    border: none;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    position: relative;
+    clear: both;
+    display: inline-block;
+  }
+  section.center div.main-text.home p.length,
+  section.center-parallax div.main-text.home p.length {
+    font-family: 'futura_bqregular', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 74.25%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 12.875%;
+    margin-bottom: 0;
+  }
+  section.center div.main-text.home p.length:before,
+  section.center-parallax div.main-text.home p.length:before,
+  section.center div.main-text.home p.length:after,
+  section.center-parallax div.main-text.home p.length:after {
+    content: '';
+    display: table;
+  }
+  section.center div.main-text.home p.length:after,
+  section.center-parallax div.main-text.home p.length:after {
+    clear: both;
+  }
+  section.center div.main-text.home p.length:last-child,
+  section.center-parallax div.main-text.home p.length:last-child {
+    margin-right: 0%;
+  }
+  section.center div.main-text.home p.length span,
+  section.center-parallax div.main-text.home p.length span {
+    font-size: 44px;
+    padding: 0 25%;
   }
   section.center p.call-to-action,
   section.center-parallax p.call-to-action {
@@ -3353,24 +3477,6 @@ section.center-parallax div.filter-opened-section:last-child {
     margin: 25px 0 0 0;
     text-transform: uppercase;
   }
-  section.center ul#yacht-size a.button,
-  section.center-parallax ul#yacht-size a.button,
-  section.center ul#latest-yachts a.button,
-  section.center-parallax ul#latest-yachts a.button,
-  section.center ul#yachts-list-grid a.button,
-  section.center-parallax ul#yachts-list-grid a.button,
-  section.center ul#filter-menu a.button,
-  section.center-parallax ul#filter-menu a.button,
-  section.center ul#yacht-size-mobile a.button,
-  section.center-parallax ul#yacht-size-mobile a.button {
-    width: 70%;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    text-transform: uppercase;
-    left: 0;
-  }
   section.center ul#yachts-list-grid,
   section.center-parallax ul#yachts-list-grid,
   section.center ul#filter-menu,
@@ -3741,10 +3847,6 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center div#other-description div.description-info h2,
   section.center-parallax div#other-description div.description-info h2 {
     margin-bottom: 40px;
-  }
-  section.center div#container-other-specs .main-text,
-  section.center-parallax div#container-other-specs .main-text {
-    margin-top: -175px;
   }
   section.center ul#latest-yachts,
   section.center-parallax ul#latest-yachts {
@@ -4128,17 +4230,6 @@ section.center-parallax div.filter-opened-section:last-child {
     line-height: 28px;
     line-height: 1.75rem;
   }
-  section.center div.main-text.home,
-  section.center-parallax div.main-text.home {
-    margin-top: 70px;
-  }
-  section.center div.main-text.home p,
-  section.center-parallax div.main-text.home p {
-    font-size: 23px;
-    font-size: 1.4375rem;
-    line-height: 31px;
-    line-height: 1.9375rem;
-  }
   section.center div.quote p,
   section.center-parallax div.quote p {
     font-size: 50px;
@@ -4308,10 +4399,6 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center-parallax div#other-description div.description-info h2 {
     margin-bottom: 40px;
   }
-  section.center div#container-other-specs .main-text,
-  section.center-parallax div#container-other-specs .main-text {
-    margin-top: -218px;
-  }
 }
 @media only screen and (min-width: 1300px) {
   section.center.latest-grid {
@@ -4343,17 +4430,6 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center div.logo:last-child,
   section.center-parallax div.logo:last-child {
     margin-right: 0%;
-  }
-  section.center div.main-text.home,
-  section.center-parallax div.main-text.home {
-    margin-top: 80px;
-  }
-  section.center div.main-text.home p,
-  section.center-parallax div.main-text.home p {
-    font-size: 29px;
-    font-size: 1.8125rem;
-    line-height: 37px;
-    line-height: 2.3125rem;
   }
   section.center ul#call-to-action-menu a,
   section.center-parallax ul#call-to-action-menu a {

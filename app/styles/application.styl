@@ -9,6 +9,7 @@
 @import '_map'
 @import '_filters'
 
+
 a
    outline 0 !important
    
@@ -72,13 +73,7 @@ p.more-info
     line-height rem(40px) !important
     font-weight bold
         
-div#container-other-specs
-    a.button
-        left 0
-        margin 30px 0 60px 0
-    ul#single-yacht-specs
-        li
-            color yellow
+
             
 div.bottom-spacer
     position relative
@@ -143,13 +138,7 @@ div.bg-img-slide
     background-repeat: no-repeat;
     background-size: cover;
 
-div#container-other-specs
-    .main-text
-        position absolute
-        width 100%
-        left 0
-        margin 0
-        margin-top -120px
+
 
 
 a#simple-menu
@@ -170,7 +159,7 @@ a#simple-menu
     top 0
     left 0
     padding 22px
-    background-color yellow
+    background-color light-blue
     
  .fast-hide  
     opacity 0
@@ -336,14 +325,7 @@ section.center, section.center-parallax
             p.description-text
                 font-weight lighter
                 margin-top 30px
-            a.button
-                    width 70%
-                    margin 0
-                    padding-left 0
-                    padding-right 0
-                    text-align center
-                    text-transform uppercase
-                    left 0
+
     ul#yachts-list-grid, ul#filter-menu
         margin-top 60px
         a.card
@@ -408,21 +390,34 @@ section.center, section.center-parallax
         display none                 
  
     
-        
+    ul#intro-menu
+        position relative
+        column(12/12)
+        li
+            position relative
+            float left
+            margin-bottom 4px
+            margin-right 4px
+            a.button
+                width 100%
     div.main-text
+        position relative
         column(12/12)
         margin-top 50px
         margin-bottom 30px
-        
-    div.main-text.home
-        margin-top 40px
-        position relative
-        text-align center
+        margin 0
+        h1
+            font-size rem(105px)
+            line-height rem(93px)
         p
-            font-size rem(19px)
-            line-height rem(26px)
-            position absolute
-            top 0
+            font-size rem(13px)
+            line-height rem(17px)
+            letter-spacing 1px
+            font-weight 300
+            margin 0
+    
+        
+        
             
             
     a.button
@@ -430,15 +425,13 @@ section.center, section.center-parallax
         clear both
         display inline-block
         margin 0
-        padding 15px 50px
-        border 2px solid yellow
+        padding 9px 40px
+        background-color light-blue
+        font-size rem(13px)
+        line-height rem(15px)
     a.button:hover
-        background-color yellow
-    a.button.home
-        position relative
-        top 50px
-        left 50%
-        margin-left -80px
+        opacity 0.7
+
     div.quote
         column(12/12)
         margin-top 100px
@@ -558,12 +551,7 @@ section.center, section.center-parallax
         height auto
         display inline-block
         border-top 1px solid navy-blue
-        a.button
-            text-align center
-            width 144px
-            margin-left -72px
-            left 50%
-            border none
+
     div.filter-opened-section
         column(12/12)
         background-color #183d79
@@ -609,8 +597,6 @@ section.center, section.center-parallax
         center(700px, 80px)  
     section.center, section.center-parallax
         center(700px, 80px)
-        div.main-text.home
-            margin-top 50px
         div.logo
             margin-top 135px
             column(6/12)
@@ -654,9 +640,6 @@ section.center, section.center-parallax
         top 60px !important
     section.center, section.center-parallax
         center(1400px, 0px)
-        div.main-text.home
-            margin-top 60px
-            shift(3/12)
         div.logo
             column(4/12)
             shift(4/12)
@@ -683,15 +666,56 @@ section.center, section.center-parallax
             shift(2/12)
             li
                 column(2/6)
+        ul#intro-menu
+            column(2/12)
+            shift(3/12)
+            padding-top 15px
+            position relative
+            li
+                width 100%
+                margin-right 0
         div.main-text
-            column(6/12)
-            shift(2/12)
-        div.main-text.left
             column(4/12)
-            shift(0/12)
-            margin-left 40px
-        a.button
+            shift(3/12)
+            border-left 1px solid white
+            padding-left 30px
+        div.main-text.home
+            position relative
+            column(8/12)
             shift(2/12)
+            text-align center
+            border 1px solid white
+            padding 30px 0
+            h1
+                margin-bottom 44px
+            p
+                column(4/8)
+                shift(2/8)
+                margin-bottom 60px
+            p.subtitle
+                margin-bottom 30px
+            hr.line-spacer
+                width 98%
+                height 1px
+                border none
+                background-color white
+                margin 0 auto
+                margin-bottom 24px
+                position relative
+                clear both
+                display inline-block
+            p.length
+                font-family 'futura_bqregular', sans-serif
+                font-size 16px
+                line-height 16px
+                letter-spacing 2px
+                column(6/8)
+                shift(1/8)
+                margin-bottom 0
+                span
+                    font-size 44px
+                    padding 0 25%
+
         p.call-to-action
             column(6/12)
             shift(2/12)
@@ -731,14 +755,7 @@ section.center, section.center-parallax
             h2
                 margin 25px 0 0 0
                 text-transform uppercase
-            a.button
-                    width 70%
-                    margin 0
-                    padding-left 0
-                    padding-right 0
-                    text-align center
-                    text-transform uppercase
-                    left 0
+
         ul#yachts-list-grid, ul#filter-menu
             margin-top 60px
             column(9/12)
@@ -799,9 +816,7 @@ section.center, section.center-parallax
                     margin-bottom 25px
                 h2
                     margin-bottom 40px
-        div#container-other-specs
-            .main-text
-                margin-top -175px
+
             
                 
                     
@@ -890,11 +905,7 @@ section.center, section.center-parallax
             a
                 font-size rem(20px)
                 line-height rem(28px)
-        div.main-text.home
-            margin-top 70px
-            p
-                font-size rem(23px)
-                line-height rem(31px)
+
         div.quote
             p
                 font-size rem(50px)
@@ -931,9 +942,7 @@ section.center, section.center-parallax
                     margin-bottom 25px
                 h2
                     margin-bottom 40px
-        div#container-other-specs
-            .main-text
-                margin-top -218px
+
 
 +above(1300px)
     section.center.latest-grid
@@ -942,11 +951,7 @@ section.center, section.center-parallax
         div.logo
             column(4/12)
             shift(4/12)
-        div.main-text.home
-            margin-top 80px
-            p
-                font-size rem(29px)
-                line-height rem(37px)
+
         ul#call-to-action-menu
             a
                 font-size rem(26px)
