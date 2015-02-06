@@ -106,7 +106,9 @@ div#landing-menu .center ul li {
 a#closeMenu {
   margin: 0;
   position: relative;
-  width: 100%;
+  width: 20px;
+  right: 20px;
+  float: right;
   display: block;
 }
 a#closeMenu img {
@@ -229,13 +231,6 @@ div#side-menu-logo img {
   background-color: #fff;
   color: #f4bb3b;
 }
-.sidr ul li:last-child {
-  padding: 0;
-  margin-top: 40px;
-}
-.sidr ul li:last-child:hover {
-  background-color: #f4bb3b;
-}
 @media only screen and (max-width: 480px) {
   .sidr {
     width: 100%;
@@ -293,8 +288,80 @@ div#side-menu-logo img {
 #slide1 {
   background-image: url("/images/landing/Intro_Decks.jpg");
 }
+#slide2 {
+  background-image: url("/images/day/dining/IMG_7321.jpg");
+}
+#slide30 {
+  background-image: url("/images/day/dining/IMG_7258.jpg");
+}
+#slide31 {
+  background-image: url("/images/day/dining/3V8G5746.jpg");
+}
+#slide32 {
+  background-image: url("/images/day/dining/3V8G6301.jpg");
+}
+#slide33 {
+  background-image: url("/images/day/dining/IMG_6745.jpg");
+}
+#slide34 {
+  background-image: url("/images/day/dining/3V8G6223.jpg");
+}
+#slide35 {
+  background-image: url("/images/day/dining/IMG_7463.jpg");
+}
+#slide3 {
+  background-image: url("/images/day/living/IMG_7235.jpg");
+}
+#slide36 {
+  background-image: url("/images/day/living/IMG_6930.jpg");
+}
+#slide37 {
+  background-image: url("/images/day/living/IMG_7649.jpg");
+}
+#slide38 {
+  background-image: url("/images/day/living/IMG_5385.jpg");
+}
+#slide39 {
+  background-image: url("/images/day/living/3V8G5342.jpg");
+}
+#slide40 {
+  background-image: url("/images/day/living/IMG_5307.jpg");
+}
+#slide41 {
+  background-image: url("/images/day/living/3V8G5329.jpg");
+}
 #slide5 {
   background-image: url("/images/landing/Intro_Cabines.jpg");
+}
+#slide6 {
+  background-image: url("/images/night/bathrooms/bathroom.jpg");
+}
+#slide7 {
+  background-image: url("/images/night/bathrooms/3V8G5854.jpg");
+}
+#slide8 {
+  background-image: url("/images/night/bathrooms/3V8G6089.jpg");
+}
+#slide9 {
+  background-image: url("/images/night/bathrooms/IMG_5886.jpg");
+}
+#slide15 {
+  background-image: url("/images/night/bathrooms/IMG_5895.jpg");
+}
+#slide16 {
+  background-image: url("/images/night/bathrooms/IMG_5991.jpg");
+}
+#slide17 {
+  background-image: url("/images/night/bathrooms/IMG_6164.jpg");
+}
+#slide18 {
+  background-image: url("/images/night/bathrooms/IMG_6268.jpg");
+}
+#slide19 {
+  background-image: url("/images/night/bathrooms/IMG_6460.jpg");
+}
+#slide20 {
+  background-image: url("/images/night/bathrooms/IMG_6541.jpg");
 }
 #slide10 {
   background-image: url("/images/landing/Intro_Specs.jpg");
@@ -620,6 +687,9 @@ a {
 }
 *:focus {
   outline: none;
+}
+#yacht_title {
+  text-align: left;
 }
 #simple-menu {
   z-index: 9999;
