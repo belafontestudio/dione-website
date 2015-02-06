@@ -16,19 +16,6 @@ a
 *:focus
     outline none
 
-#sailogy_holder
-    width 100%
-    background navy-blue
-    iframe
-        width 100% !important
-        border 0
-        frameborder 0
-        background navy-blue
-        overflow hidden
-        scrolling no
-        
-        &:focus
-            outline none
 
 #simple-menu
     z-index 9999
@@ -206,8 +193,9 @@ section.center
         font-size rem(13px)
         line-height rem(15px)
         text-decoration none
-    a.button:hover
-        opacity 0.7
+        opacity(0.7)
+    a.button:hover,a.button.active
+        opacity(1)
 
 
             
