@@ -1,4 +1,15 @@
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500");
+<<<<<<< HEAD
+=======
+@import url("http://fonts.googleapis.com/css?family=Gentium+Book+Basic");
+@font-face {
+  font-family: 'futura_bqregular';
+  src: url("../fonts/Futura Demi/futurabq-demibold-webfont.eot");
+  src: url("../fonts/Futura Demi/futurabq-demibold-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/Futura Demi/futurabq-demibold-webfont.woff2") format('woff2'), url("../fonts/Futura Demi/futurabq-demibold-webfont.woff") format('woff'), url("../fonts/Futura Demi/futurabq-demibold-webfont.ttf") format('truetype'), url("../fonts/Futura Demi/futurabq-demibold-webfont.svg#futura_bqregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+>>>>>>> FETCH_HEAD
 * {
   box-sizing: border-box;
 }
@@ -11,9 +22,16 @@ body {
 }
 body,
 input {
+<<<<<<< HEAD
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+=======
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  color: #fff;
+>>>>>>> FETCH_HEAD
 }
 body section.center,
 input section.center {
@@ -42,6 +60,18 @@ body .uppercase,
 input .uppercase {
   text-transform: uppercase;
 }
+<<<<<<< HEAD
+=======
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: 'futura_bqregular', sans-serif;
+  font-weight: normal !important;
+  color: #fff;
+}
+>>>>>>> FETCH_HEAD
 div#landing-menu {
   position: absolute;
   width: 100%;
@@ -114,7 +144,11 @@ a#closeMenu:hover {
   overflow-y: auto;
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
+<<<<<<< HEAD
   background: #f4bb3b;
+=======
+  background: #9dd2cc;
+>>>>>>> FETCH_HEAD
   color: #fff;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -255,7 +289,11 @@ div#side-menu-logo img {
 }
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
+<<<<<<< HEAD
   background: #f4bb3b;
+=======
+  background: #fff;
+>>>>>>> FETCH_HEAD
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -263,7 +301,11 @@ div#side-menu-logo img {
   left: 2px;
   width: 8px;
   height: 8px;
+<<<<<<< HEAD
   border: 1px solid #f4bb3b;
+=======
+  border: 1px solid #fff;
+>>>>>>> FETCH_HEAD
   background: rgba(0,0,0,0);
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -271,6 +313,7 @@ div#side-menu-logo img {
   z-index: 1;
 }
 #slide1 {
+<<<<<<< HEAD
   background-image: url("/images/landing/charter.jpg");
 }
 #slide5 {
@@ -278,6 +321,15 @@ div#side-menu-logo img {
 }
 #slide10 {
   background-image: url("/images/landing/alaska4.jpg");
+=======
+  background-image: url("/images/landing/Intro_Decks.jpg");
+}
+#slide5 {
+  background-image: url("/images/landing/Intro_Cabines.jpg");
+}
+#slide10 {
+  background-image: url("/images/landing/Intro_Specs.jpg");
+>>>>>>> FETCH_HEAD
 }
 #slide12 {
   background-image: url("/images/landing/bareboat.jpg");
@@ -323,7 +375,11 @@ div#side-menu-logo img {
 }
 .modal {
   width: 800px;
+<<<<<<< HEAD
   background: #f4bb3b;
+=======
+  background: #9dd2cc;
+>>>>>>> FETCH_HEAD
   padding: 30px 60px;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -631,6 +687,7 @@ div#contact-us-modal fieldset .control-group.submit input:hover {
 .gm-style-iw a {
   color: #4272db;
 }
+<<<<<<< HEAD
 div.filter-opened-section #slider-guest div.icon-guest-min,
 div.filter-opened-section #slider-guest div.icon-guest-max {
   position: absolute;
@@ -887,6 +944,11 @@ div.filter-opened-section {
   height: 0;
   display: none;
 }
+=======
+a {
+  outline: 0 !important;
+}
+>>>>>>> FETCH_HEAD
 *:focus {
   outline: none;
 }
@@ -935,6 +997,7 @@ div.filter-opened-section {
   -ms-transform: translateZ(1px);
   transform: translateZ(1px);
 }
+<<<<<<< HEAD
 .section.inner-map {
   width: 100%;
   height: 600px;
@@ -968,6 +1031,8 @@ div.bottom-spacer {
   clear: both;
   margin: 0 0 200px 0;
 }
+=======
+>>>>>>> FETCH_HEAD
 div#landing-menu {
   position: fixed;
   top: 0;
@@ -988,27 +1053,45 @@ ul#anchor-menu li {
 }
 ul#anchor-menu a {
   outline: 0;
+<<<<<<< HEAD
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
+=======
+  font-family: 'futura_bqregular', sans-serif;
+  font-weight: normal !important;
+>>>>>>> FETCH_HEAD
   text-rendering: optimizeLegibility;
   color: #fff;
   font-size: 15px;
   line-height: 15px;
+<<<<<<< HEAD
   letter-spacing: 1px;
+=======
+  letter-spacing: 1.8px;
+>>>>>>> FETCH_HEAD
   text-transform: uppercase;
   text-decoration: none;
 }
 ul#anchor-menu a.active,
 ul#anchor-menu a:hover,
 ul#anchor-menu a:active {
+<<<<<<< HEAD
   color: #f4bb3b;
 }
 ul#anchor-menu a.active {
   border-bottom: 1px solid #f4bb3b;
+=======
+  color: #9dd2cc;
+  border-bottom: 1px solid #9dd2cc;
+}
+ul#anchor-menu a.active {
+  border-bottom: 1px solid #9dd2cc;
+>>>>>>> FETCH_HEAD
 }
 div#sidr {
   z-index: 4;
 }
+<<<<<<< HEAD
 div.imgbackground {
   position: absolute;
   width: 100%;
@@ -1027,6 +1110,8 @@ div.imgbackground img.full-picture {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   filter: alpha(opacity=60);
 }
+=======
+>>>>>>> FETCH_HEAD
 div.bg-img-slide {
   z-index: 0;
   position: absolute;
@@ -1039,6 +1124,7 @@ div.bg-img-slide {
   -moz-background-size: cover;
   background-size: cover;
 }
+<<<<<<< HEAD
 div#container-other-specs .main-text {
   position: absolute;
   width: 100%;
@@ -1046,6 +1132,8 @@ div#container-other-specs .main-text {
   margin: 0;
   margin-top: -120px;
 }
+=======
+>>>>>>> FETCH_HEAD
 a#simple-menu {
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
@@ -1063,7 +1151,11 @@ a#simple-menu {
   top: 0;
   left: 0;
   padding: 22px;
+<<<<<<< HEAD
   background-color: #f4bb3b;
+=======
+  background-color: #9dd2cc;
+>>>>>>> FETCH_HEAD
 }
 .fast-hide {
   opacity: 0;
@@ -1095,6 +1187,7 @@ a#simple-menu {
   -ms-transition: opacity 1s;
   transition: opacity 1s;
 }
+<<<<<<< HEAD
 section.center,
 section.center-parallax {
   z-index: 2;
@@ -1103,10 +1196,19 @@ section.center-parallax {
 section.center div.logo,
 section.center-parallax div.logo {
   margin-top: 100px;
+=======
+section.center {
+  z-index: 2;
+  padding: 0 20px;
+}
+section.center ul#intro-menu {
+  position: relative;
+>>>>>>> FETCH_HEAD
   *zoom: 1;
   float: left;
   clear: none;
   text-align: inherit;
+<<<<<<< HEAD
   width: 65.6666666666667%;
   margin-left: 0%;
   margin-right: 3%;
@@ -1218,6 +1320,39 @@ section.center-parallax ul.vertical-list li {
 }
 section.center p.call-to-action,
 section.center-parallax p.call-to-action {
+=======
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+  margin-bottom: 60px;
+}
+section.center ul#intro-menu:before,
+section.center ul#intro-menu:after {
+  content: '';
+  display: table;
+}
+section.center ul#intro-menu:after {
+  clear: both;
+}
+section.center ul#intro-menu:last-child {
+  margin-right: 0%;
+}
+section.center ul#intro-menu li {
+  position: relative;
+  float: left;
+  margin-bottom: 4px;
+  margin-right: 4px;
+}
+section.center ul#intro-menu li a.button {
+  width: 100%;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  font-weight: normal !important;
+}
+section.center div.main-text {
+  position: relative;
+>>>>>>> FETCH_HEAD
   *zoom: 1;
   float: left;
   clear: none;
@@ -1225,6 +1360,7 @@ section.center-parallax p.call-to-action {
   width: 100%;
   margin-left: 0%;
   margin-right: 3%;
+<<<<<<< HEAD
   text-transform: uppercase;
   font-style: italic;
   margin-bottom: 30px;
@@ -3956,10 +4092,225 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center-parallax ul#yachts-list-grid li ul.yacht-specs,
   section.center ul#filter-menu li ul.yacht-specs,
   section.center-parallax ul#filter-menu li ul.yacht-specs {
+=======
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin: 0;
+}
+section.center div.main-text:before,
+section.center div.main-text:after {
+  content: '';
+  display: table;
+}
+section.center div.main-text:after {
+  clear: both;
+}
+section.center div.main-text:last-child {
+  margin-right: 0%;
+}
+section.center div.main-text h1 {
+  font-size: 71px;
+  font-size: 4.4375rem;
+  line-height: 65px;
+  line-height: 4.0625rem;
+  margin: 7px 0 30px 0;
+}
+section.center div.main-text p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 0;
+}
+section.center div.main-text.home h1 {
+  margin-bottom: 44px;
+}
+section.center div.main-text.home p {
+  margin-bottom: 40px;
+}
+section.center div.main-text.home p.subtitle {
+  margin-bottom: 20px;
+}
+section.center div.main-text.home hr.line-spacer {
+  width: 98%;
+  height: 1px;
+  border: none;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
+  clear: both;
+  display: inline-block;
+}
+section.center div.main-text.home p.length {
+  font-family: 'futura_bqregular', sans-serif;
+  font-weight: normal !important;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+section.center div.main-text.home p.length span {
+  font-size: 44px;
+  padding: 0 10%;
+}
+section.center a.button {
+  position: relative;
+  clear: both;
+  display: inline-block;
+  margin: 0;
+  padding: 9px 24px;
+  background-color: #9dd2cc;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 15px;
+  line-height: 0.9375rem;
+  text-decoration: none;
+}
+section.center a.button:hover {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+@media only screen and (max-width: 480px) {
+  .fp-controlArrow {
+    display: none !important;
+  }
+  .slide.mobile-slide {
+    display: inline-block;
+  }
+  .scroll {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .slide.mobile-slide {
+    display: none;
+  }
+  ul#anchor-menu {
+    margin-left: 0 !important;
+  }
+  div#landing-menu {
+    *zoom: 1;
+    width: auto;
+    max-width: 100%;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  div#landing-menu:before,
+  div#landing-menu:after {
+    content: '';
+    display: table;
+  }
+  div#landing-menu:after {
+    clear: both;
+  }
+  div#landing-menu .center {
+    overflow: hidden;
+    padding: 0;
+  }
+  div#landing-menu .center .scroll {
+    width: 100%;
+  }
+  div#landing-menu .center ul {
+    display: inline-block;
+  }
+  section.center {
+    *zoom: 1;
+    width: auto;
+    max-width: 100%;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  section.center:before,
+  section.center:after {
+    content: '';
+    display: table;
+  }
+  section.center:after {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 600px) {
+  div#landing-menu {
+    *zoom: 1;
+    width: auto;
+    max-width: 700px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  div#landing-menu:before,
+  div#landing-menu:after {
+    content: '';
+    display: table;
+  }
+  div#landing-menu:after {
+    clear: both;
+  }
+  section.center {
+    *zoom: 1;
+    width: auto;
+    max-width: 700px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  section.center:before,
+  section.center:after {
+    content: '';
+    display: table;
+  }
+  section.center:after {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .scroll {
+    display: block;
+  }
+  div#landing-menu {
+    *zoom: 1;
+    width: auto;
+    max-width: 1400px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  div#landing-menu:before,
+  div#landing-menu:after {
+    content: '';
+    display: table;
+  }
+  div#landing-menu:after {
+    clear: both;
+  }
+  div#landing-menu ul#anchor-menu {
+>>>>>>> FETCH_HEAD
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
+<<<<<<< HEAD
     width: 100%;
     margin-left: 0%;
     margin-right: 3%;
@@ -4048,16 +4399,63 @@ section.center-parallax div.filter-opened-section:last-child {
   section.center-parallax div.reset-button,
   section.center div.filter-opened-section,
   section.center-parallax div.filter-opened-section {
-    *zoom: 1;
-    float: left;
-    clear: none;
-    text-align: inherit;
-    width: 74.25%;
+=======
+    width: 65.6666666666667%;
     margin-left: 0%;
     margin-right: 3%;
     position: relative;
     left: 17.1666666666667%;
   }
+  div#landing-menu ul#anchor-menu:before,
+  div#landing-menu ul#anchor-menu:after {
+    content: '';
+    display: table;
+  }
+  div#landing-menu ul#anchor-menu:after {
+    clear: both;
+  }
+  div#landing-menu ul#anchor-menu:last-child {
+    margin-right: 0%;
+  }
+  div#landing-menu ul#anchor-menu li {
+    margin-right: 45px;
+  }
+  section.center {
+    *zoom: 1;
+    width: auto;
+    max-width: 1400px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  section.center:before,
+  section.center:after {
+    content: '';
+    display: table;
+  }
+  section.center:after {
+    clear: both;
+  }
+  section.center ul#anchor-menu {
+>>>>>>> FETCH_HEAD
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+<<<<<<< HEAD
+    width: 74.25%;
+=======
+    width: 65.6666666666667%;
+>>>>>>> FETCH_HEAD
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 17.1666666666667%;
+  }
+<<<<<<< HEAD
   section.center div.reset-button:before,
   section.center-parallax div.reset-button:before,
   section.center div.filter-opened-section:before,
@@ -4155,10 +4553,25 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center ul#latest-yachts,
   section.center-parallax ul#latest-yachts {
+=======
+  section.center ul#anchor-menu:before,
+  section.center ul#anchor-menu:after {
+    content: '';
+    display: table;
+  }
+  section.center ul#anchor-menu:after {
+    clear: both;
+  }
+  section.center ul#anchor-menu:last-child {
+    margin-right: 0%;
+  }
+  section.center ul#intro-menu {
+>>>>>>> FETCH_HEAD
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
+<<<<<<< HEAD
     width: 100%;
     margin-left: 0%;
     margin-right: 3%;
@@ -4183,6 +4596,32 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center ul#latest-yachts li,
   section.center-parallax ul#latest-yachts li {
+=======
+    width: 14.166666666666702%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 17.1666666666667%;
+    padding-top: 15px;
+    position: relative;
+  }
+  section.center ul#intro-menu:before,
+  section.center ul#intro-menu:after {
+    content: '';
+    display: table;
+  }
+  section.center ul#intro-menu:after {
+    clear: both;
+  }
+  section.center ul#intro-menu:last-child {
+    margin-right: 0%;
+  }
+  section.center ul#intro-menu li {
+    width: 100%;
+    margin-right: 0;
+  }
+  section.center div.main-text {
+>>>>>>> FETCH_HEAD
     *zoom: 1;
     float: left;
     clear: none;
@@ -4190,6 +4629,7 @@ section.center-parallax div.filter-opened-section:last-child {
     width: 31.3333333333333%;
     margin-left: 0%;
     margin-right: 3%;
+<<<<<<< HEAD
   }
   section.center ul#latest-yachts li:before,
   section.center-parallax ul#latest-yachts li:before,
@@ -4208,6 +4648,32 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center div#container-other-specs,
   section.center-parallax div#container-other-specs {
+=======
+    position: relative;
+    left: 17.1666666666667%;
+    border-left: 1px solid #fff;
+    padding-left: 30px;
+  }
+  section.center div.main-text:before,
+  section.center div.main-text:after {
+    content: '';
+    display: table;
+  }
+  section.center div.main-text:after {
+    clear: both;
+  }
+  section.center div.main-text:last-child {
+    margin-right: 0%;
+  }
+  section.center div.main-text h1 {
+    font-size: 105px;
+    font-size: 6.5625rem;
+    line-height: 93px;
+    line-height: 5.8125rem;
+  }
+  section.center div.main-text.home {
+    position: relative;
+>>>>>>> FETCH_HEAD
     *zoom: 1;
     float: left;
     clear: none;
@@ -4217,6 +4683,7 @@ section.center-parallax div.filter-opened-section:last-child {
     margin-right: 3%;
     position: relative;
     left: 17.1666666666667%;
+<<<<<<< HEAD
   }
   section.center div#container-other-specs:before,
   section.center-parallax div#container-other-specs:before,
@@ -4260,10 +4727,32 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center div#container-other-specs div#other-description,
   section.center-parallax div#container-other-specs div#other-description {
+=======
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 30px 0;
+  }
+  section.center div.main-text.home:before,
+  section.center div.main-text.home:after {
+    content: '';
+    display: table;
+  }
+  section.center div.main-text.home:after {
+    clear: both;
+  }
+  section.center div.main-text.home:last-child {
+    margin-right: 0%;
+  }
+  section.center div.main-text.home h1 {
+    margin-bottom: 44px;
+  }
+  section.center div.main-text.home p {
+>>>>>>> FETCH_HEAD
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
+<<<<<<< HEAD
     width: 61.375%;
     margin-left: 0%;
     margin-right: 3%;
@@ -4319,10 +4808,35 @@ section.center-parallax div.filter-opened-section:last-child {
   }
   section.center div.logo,
   section.center-parallax div.logo {
+=======
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 25.75%;
+    margin-bottom: 60px;
+  }
+  section.center div.main-text.home p:before,
+  section.center div.main-text.home p:after {
+    content: '';
+    display: table;
+  }
+  section.center div.main-text.home p:after {
+    clear: both;
+  }
+  section.center div.main-text.home p:last-child {
+    margin-right: 0%;
+  }
+  section.center div.main-text.home p.subtitle {
+    margin-bottom: 40px;
+  }
+  section.center div.main-text.home p.length {
+>>>>>>> FETCH_HEAD
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
+<<<<<<< HEAD
     width: 31.3333333333333%;
     margin-left: 0%;
     margin-right: 3%;
@@ -4379,6 +4893,28 @@ section.center-parallax div.filter-opened-section:last-child {
   ul#single-yacht-specs li {
     display: inline;
     margin-right: 27px;
+=======
+    width: 74.25%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: relative;
+    left: 12.875%;
+    margin-bottom: 0;
+  }
+  section.center div.main-text.home p.length:before,
+  section.center div.main-text.home p.length:after {
+    content: '';
+    display: table;
+  }
+  section.center div.main-text.home p.length:after {
+    clear: both;
+  }
+  section.center div.main-text.home p.length:last-child {
+    margin-right: 0%;
+  }
+  section.center div.main-text.home p.length span {
+    padding: 0 18%;
+>>>>>>> FETCH_HEAD
   }
 }
 
