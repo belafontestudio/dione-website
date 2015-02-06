@@ -1,15 +1,23 @@
 extends ../layouts/_section_intro.jade
 
-
-block first-list-item
-  a.button(href="#") Twin
-block second-list-item
-  a.button(href="#") Double
-block third-list-item
-  a.button(href="#") Vip Double
-block fourth-list-item
-  a.button(href="#") Shipowner Double
+block menu-list
+  ul#intro-menu
+    li
+      a.button(href="#") Intro
+    li
+      a.button(href="#") Main deck cabin
+    li
+      a.button.active(href="#") Twin cabins
+    li
+      a.button(href="#") Owner's cabin
+    li
+      a.button(href="#") Guest cabins
+    li
+      a.button(href="#") Office and pilot cabin
+    li
+      a.button(href="#") Bathrooms
+      
 block title 
   | Twin cabins
 block description
-  | The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe use the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.
+  | The five cabins below deck include two identical twin cabins, in dark shiny Honduras mahogany, with a striking sailing boat feeling.

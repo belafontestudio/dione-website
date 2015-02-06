@@ -29819,7 +29819,7 @@ $(document).ready(function() {
 function createLanding(){
     $('#onepage').fullpage({
         menu: '#anchor-menu',
-        anchors:['landing','decks', 'cabines','specs'],
+        anchors:['home','yacht', 'day','night','specs'],
         resize: false,
         autoScrolling: true,
         scrollOverflow: true,

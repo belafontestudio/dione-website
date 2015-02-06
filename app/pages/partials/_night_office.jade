@@ -1,15 +1,23 @@
 extends ../layouts/_section_intro.jade
 
 
-block first-list-item
-  a.button(href="#") Twin
-block second-list-item
-  a.button(href="#") Double
-block third-list-item
-  a.button(href="#") Vip Double
-block fourth-list-item
-  a.button(href="#") Shipowner Double
+block menu-list
+  ul#intro-menu
+    li
+      a.button(href="#") Intro
+    li
+      a.button(href="#") Main deck cabin
+    li
+      a.button(href="#") Twin cabins
+    li
+      a.button(href="#") Owner's cabin
+    li
+      a.button(href="#") Guest cabins
+    li
+      a.button.active(href="#") Office and pilot cabin
+    li
+      a.button(href="#") Bathrooms
 block title 
   | Office and pilot cabin
 block description
-  | The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe use the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.
+  | Also below deck are the office and pilot cabin, which is inside the laundry area. This small cabin with vertical double berths can occasionally accommodate overnight staff or last minute guests.

@@ -1,14 +1,21 @@
 extends ../layouts/_section_intro.jade
 
-
-block first-list-item
-  a.button(href="#") Twin
-block second-list-item
-  a.button(href="#") Double
-block third-list-item
-  a.button(href="#") Vip Double
-block fourth-list-item
-  a.button(href="#") Shipowner Double
+block menu-list
+  ul#intro-menu
+    li
+      a.button.active(href="#") Intro
+    li
+      a.button(href="#") Main deck cabin
+    li
+      a.button(href="#") Twin cabins
+    li
+      a.button(href="#") Owner's cabin
+    li
+      a.button(href="#") Guest cabins
+    li
+      a.button(href="#") Office and pilot cabin
+    li
+      a.button(href="#") Bathrooms
 block title 
   | Night
 block description

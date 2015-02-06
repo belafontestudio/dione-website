@@ -1,14 +1,17 @@
 extends ../layouts/_section_intro.jade
 
-
-block first-list-item
-  a.button(href="#") The Sails
-block second-list-item
-  a.button(href="#") Planimetry
-block third-list-item
-  a.button(href="#") Machinery
-block fourth-list-item
-  a.button(href="#") Tankage
+block menu-list
+  ul#intro-menu
+    li
+      a.button(href="#") Intro
+    li
+      a.button.active(href="#") The Sails
+    li
+      a.button(href="#") Planimetry
+    li
+      a.button(href="#") Machinery
+    li
+      a.button(href="#") Tankage
 block title 
   | The sails
 block description
