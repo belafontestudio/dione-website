@@ -29599,20 +29599,6 @@ b.bind("mouseup.slimscroll",function(a){y=!1;p();b.unbind(".slimscroll")});retur
 ;
 ;
 ;
-<<<<<<< HEAD
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-=======
->>>>>>> FETCH_HEAD
 
 //Resize
 $( window ).resize(function() {
@@ -29844,11 +29830,7 @@ $(document).ready(function() {
 function createLanding(){
     $('#onepage').fullpage({
         menu: '#anchor-menu',
-<<<<<<< HEAD
-        anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],
-=======
         anchors:['landing','decks', 'cabines','specs'],
->>>>>>> FETCH_HEAD
         resize: false,
         autoScrolling: true,
         scrollOverflow: true,
