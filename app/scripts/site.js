@@ -28,14 +28,14 @@ enquire.register("screen and (max-width:480px)", {
           $.fn.fullpage.destroy('all');
         }
     }
-      
+
 });
 enquire.register("screen and (min-width: 480px)", {
     match : function() {
         console.log("match web");
-        
-        checkPage("web"); 
-    },  
+
+        checkPage("web");
+    },
     unmatch : function() {
         console.log("unmatch web");
         if($(".fullpage-wrapper")[0]){
@@ -63,12 +63,12 @@ function activeFS(target){
         $('section.filter-hide').each(function(){
             if (counter != target){
                 $(this).fadeOut(0);
-                 
+
             }else{
                 $(this).delay(500).fadeIn(1000);
-                
+
             }
-            
+
             counter++;
         });
 }
@@ -78,12 +78,12 @@ function activeLI(target){
         $('a.filter').each(function(){
             if (counter != target){
                 $(this).parent().removeClass("active");
-                 
+
             }else{
                 $(this).parent().addClass("active");
-                
+
             }
-            
+
             counter++;
         });
 };
@@ -121,7 +121,7 @@ function rangeSlider(){
 }
 $(document).ready(function() {
 
-    
+
 
 
     filterMenu();
@@ -149,14 +149,14 @@ $(document).ready(function() {
               $("#filter-mega-yacht").fadeIn(1000);
             break;
           }
-          
-          
+
+
 
         }
        });
 
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
-        
+
         if($(".fullpage-wrapper")[0]){
             $.fn.fullpage.setAllowScrolling(false);
             $.fn.fullpage.setKeyboardScrolling(false);
@@ -170,7 +170,7 @@ $(document).ready(function() {
         }
     });
 
-    
+
     $('#simple-menu').sidr({
         displace: true,
         onOpen : menuOpen,
@@ -185,15 +185,15 @@ $(document).ready(function() {
             menu.removeClass('show');
         }
         var hmenu = $('div#landing-menu div.center');
-            
+
         if (!hmenu.hasClass('hide')){
             hmenu.addClass('hide');
         }
         if (hmenu.hasClass('show')){
             hmenu.removeClass('show');
         }
-          
-        
+
+
     };
     function menuClose() {
         var menu = $('a#simple-menu');
@@ -202,7 +202,7 @@ $(document).ready(function() {
             menu.removeClass('hide');
         }
         var hmenu = $('div#landing-menu div.center');
-            
+
         if (!hmenu.hasClass('show')){
             hmenu.addClass('show');
         }
@@ -232,27 +232,27 @@ function createLanding(){
         afterLoad: function(anchorLink, index){
             var hmenu = $('div#landing-menu div.center')
             //using anchorLink
-            
-            
+
+
                 if (!hmenu.hasClass('show')){
                     hmenu.addClass('show');
                 }
                 if (hmenu.hasClass('fast-hide')){
                     hmenu.removeClass('fast-hide');
                 }
-                
-            
+
+
         },
         onLeave: function(index, nextIndex, direction){
             var hmenu = $('div#landing-menu div.center')
-       
+
                 hmenu.addClass('fast-hide');
                 if (hmenu.hasClass('show')){
                     hmenu.removeClass('show');
                 }
-                
-             
-            
+
+
+
         }
 
     });
@@ -263,34 +263,34 @@ function hasFullPage(page){
     });
 }
 function webSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){ 
+    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){
       homeSlides();
       createLanding();
     });
 }
 function mobileSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){ 
+    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){
         homeSlides();
         createLanding();
     });
 }
 
-      
+
 function checkPage(size){
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
-        
+
         if (size == "web"){
             webSlide();
         }else if (size == "mobile"){
-           mobileSlide(); 
+           mobileSlide();
         }
-        
-        
+
+
 
     }else if(pathArray[2] == "single_yacht.html"){
         $('#onepage').fullpage({
-        
+
             resize: false,
             autoScrolling: false,
             scrollOverflow: true,
@@ -300,12 +300,12 @@ function checkPage(size){
             loopHorizontal: false,
             slidesNavigation: true,
             slidesNavPosition: 'bottom'
-        
+
 
         });
     }else if(pathArray[2] == "single_expedition.html"){
         $('#onepage').fullpage({
-        
+
             resize: false,
             autoScrolling: false,
             scrollOverflow: true,
@@ -315,13 +315,13 @@ function checkPage(size){
             loopHorizontal: false,
             slidesNavigation: true,
             slidesNavPosition: 'bottom'
-        
+
 
         });
     }else{
         $("html").css("overflow","visible");
         $("body").css("overflow","visible");
-        
+
     }
 
 }
@@ -333,5 +333,3 @@ function homeSlides(){
     $('a#m1').addClass("active");
 
 }
-
-
