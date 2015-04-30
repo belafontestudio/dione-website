@@ -132,7 +132,6 @@ $(document).ready(function() {
 
   });
 
-
     filterMenu();
     rangeSlider();
     guestSlider();
