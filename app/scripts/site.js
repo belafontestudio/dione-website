@@ -219,7 +219,7 @@ $(document).ready(function() {
 function createLanding(){
     $('#onepage').fullpage({
         menu: '#anchor-menu',
-        anchors:['home','yacht', 'day','night','specs'],
+        anchors:['home','yacht', 'outside','bimini','fly', 'stern'],
         resize: false,
         autoScrolling: true,
         scrollOverflow: true,
@@ -303,7 +303,81 @@ function checkPage(size){
 
 
         });
-    
+    }else if(pathArray[2] == "life_on_board.html"){
+            $('#onepage').fullpage({
+
+                resize: false,
+                autoScrolling: true,
+                scrollOverflow: true,
+                scrollBar: false,
+                responsive: 480,
+                loopTop: false,
+                loopHorizontal: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+
+
+            });
+    }else if(pathArray[2] == "logbook.html"){
+            $('#onepage').fullpage({
+
+                resize: false,
+                autoScrolling: true,
+                scrollOverflow: true,
+                scrollBar: false,
+                responsive: 480,
+                loopTop: false,
+                loopHorizontal: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+
+
+            });  
+    }else if(pathArray[2] == "events.html"){
+            $('#onepage').fullpage({
+
+                resize: false,
+                autoScrolling: true,
+                scrollOverflow: true,
+                scrollBar: false,
+                responsive: 480,
+                loopTop: false,
+                loopHorizontal: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+
+
+            }); 
+    }else if(pathArray[2] == "specs.html"){
+            $('#onepage').fullpage({
+
+                resize: false,
+                autoScrolling: true,
+                scrollOverflow: true,
+                scrollBar: false,
+                responsive: 480,
+                loopTop: false,
+                loopHorizontal: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+
+
+            }); 
+    }else if(pathArray[2] == "login.html"){
+            $('#onepage').fullpage({
+
+                resize: false,
+                autoScrolling: true,
+                scrollOverflow: true,
+                scrollBar: false,
+                responsive: 480,
+                loopTop: false,
+                loopHorizontal: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+
+
+            });          
     }else{
         $("html").css("overflow","visible");
         $("body").css("overflow","visible");
