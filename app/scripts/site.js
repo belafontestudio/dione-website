@@ -288,36 +288,22 @@ function checkPage(size){
 
 
 
-    }else if(pathArray[2] == "single_yacht.html"){
+    }else if(pathArray[2] == "inside.html"){
         $('#onepage').fullpage({
 
             resize: false,
-            autoScrolling: false,
+            autoScrolling: true,
             scrollOverflow: true,
             scrollBar: false,
             responsive: 480,
             loopTop: false,
             loopHorizontal: false,
             slidesNavigation: true,
-            slidesNavPosition: 'bottom'
+            slidesNavPosition: 'bottom',
 
 
         });
-    }else if(pathArray[2] == "single_expedition.html"){
-        $('#onepage').fullpage({
-
-            resize: false,
-            autoScrolling: false,
-            scrollOverflow: true,
-            scrollBar: false,
-            responsive: 480,
-            loopTop: false,
-            loopHorizontal: false,
-            slidesNavigation: true,
-            slidesNavPosition: 'bottom'
-
-
-        });
+    
     }else{
         $("html").css("overflow","visible");
         $("body").css("overflow","visible");
