@@ -30278,7 +30278,16 @@ function rangeSlider(){
 }
 $(document).ready(function() {
 
+  $(".section .slide a.button").click(function(e){
+    e.preventDefault();
 
+    var selection = $(this).attr("href");
+    var section = selection.substring(1, 1);
+    var slide = selection.substring(2, 1);
+    console.log(section,slide)
+    $.fn.fullpage.moveTo();
+
+  });
 
 
     filterMenu();
@@ -30489,7 +30498,7 @@ function checkPage(size){
                 slidesNavPosition: 'bottom',
 
 
-            });  
+            });
     }else if(pathArray[2] == "events.html"){
             $('#onepage').fullpage({
 
@@ -30504,7 +30513,7 @@ function checkPage(size){
                 slidesNavPosition: 'bottom',
 
 
-            }); 
+            });
     }else if(pathArray[2] == "specs.html"){
             $('#onepage').fullpage({
 
@@ -30519,7 +30528,7 @@ function checkPage(size){
                 slidesNavPosition: 'bottom',
 
 
-            }); 
+            });
     }else if(pathArray[2] == "login.html"){
             $('#onepage').fullpage({
 
@@ -30534,7 +30543,7 @@ function checkPage(size){
                 slidesNavPosition: 'bottom',
 
 
-            });          
+            });
     }else{
         $("html").css("overflow","visible");
         $("body").css("overflow","visible");
