@@ -298,8 +298,10 @@ function checkPage(size){
 
 
     }else if(pathArray[2] == "inside.html"){
+        $('a#m1').addClass("active");
         $('#onepage').fullpage({
-
+            menu: '#anchor-menu',
+            anchors:['inside','dining', 'living','maindeck','owner', 'twincab', 'guest','office','bathrooms'],
             resize: false,
             autoScrolling: true,
             scrollOverflow: true,
@@ -313,8 +315,10 @@ function checkPage(size){
 
         });
     }else if(pathArray[2] == "life_on_board.html"){
+            $('a#m1').addClass("active");
             $('#onepage').fullpage({
-
+                menu: '#anchor-menu',
+                anchors:['lifeonboard','ondeck', 'cabins','mingle','tendersandtoys'],
                 resize: false,
                 autoScrolling: true,
                 scrollOverflow: true,
@@ -328,8 +332,10 @@ function checkPage(size){
 
             });
     }else if(pathArray[2] == "logbook.html"){
+        $('a#m1').addClass("active");
             $('#onepage').fullpage({
-
+                menu: '#anchor-menu',
+                anchors:['logbook','comfortandsafety', 'standards','homefromhome','cruising','crew'],
                 resize: false,
                 autoScrolling: true,
                 scrollOverflow: true,
@@ -343,7 +349,10 @@ function checkPage(size){
 
             });
     }else if(pathArray[2] == "events.html"){
+        $('a#m1').addClass("active");
             $('#onepage').fullpage({
+                menu: '#anchor-menu',
+                anchors:['events','formal'],
 
                 resize: false,
                 autoScrolling: true,
@@ -358,7 +367,10 @@ function checkPage(size){
 
             });
     }else if(pathArray[2] == "specs.html"){
+        $('a#m1').addClass("active");
             $('#onepage').fullpage({
+                menu: '#anchor-menu',
+                anchors:['specs','range', 'ample'],
 
                 resize: false,
                 autoScrolling: true,
@@ -373,7 +385,10 @@ function checkPage(size){
 
             });
     }else if(pathArray[2] == "login.html"){
+        $('a#m1').addClass("active");
             $('#onepage').fullpage({
+                menu: '#anchor-menu',
+                anchors:['login'],
 
                 resize: false,
                 autoScrolling: true,
