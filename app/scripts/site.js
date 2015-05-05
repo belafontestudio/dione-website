@@ -417,3 +417,16 @@ function homeSlides(){
     $('a#m1').addClass("active");
 
 }
+
+
+// DROPDOWN
+
+$('#dropdown-selector').hover(function() {
+  $('#dropdown-menu').stop().fadeIn( "slow", function() {
+    $("#m20").css("color","light-blue !important");
+  })
+}, function(){
+  $('#dropdown-menu').stop().fadeOut( "slow", function() {
+    // Animation complete.
+  })
+});

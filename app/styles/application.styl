@@ -25,6 +25,9 @@ a
   z-index 1
   opacity 0.4
 
+.section
+  position: relative
+
 *:focus
     outline none
 
@@ -80,6 +83,7 @@ div#landing-menu
                 border-bottom 1px solid light-blue
             &.active
                 border-bottom 1px solid light-blue
+
 div#sidr
     z-index 4
 
@@ -308,3 +312,35 @@ section.center
                 margin-bottom 0
                 span
                     padding 0 18%
+
+
+
+
+
+
+
+// Dropdown menu
+
+#m20
+  cursor pointer
+
+
+#dropdown-menu
+  border-top 1px solid white
+  padding 0
+  padding-left 30px
+  padding-top 5px
+  position absolute
+  top 21px
+  left 0
+  -webkit-box-shadow: none
+  -moz-box-shadow none
+  box-shadow none
+  display none
+  //opacity 0
+  //visibility hidden
+  -webkit-transiton opacity 0.2s
+  -moz-transition opacity 0.2s
+  -ms-transition opacity 0.2s
+  -o-transition opacity 0.2s
+  -transition opacity 0.2s
