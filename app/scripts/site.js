@@ -301,7 +301,7 @@ function checkPage(size){
         $('a#m1').addClass("active");
         $('#onepage').fullpage({
             menu: '#anchor-menu',
-            anchors:['inside','dining', 'living','maindeck','owner', 'twincab', 'guest','office','bathrooms'],
+            anchors:['inside','dining', 'living','maindeck','owner', 'twincab', 'guest','office','bathrooms','inside-crew'],
             resize: false,
             autoScrolling: true,
             scrollOverflow: true,
