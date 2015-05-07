@@ -127,7 +127,7 @@ function rangeSlider(){
 
 $(document).ready(function() {
     preventPrivateSection();
-    
+
     $(document).keydown(function(e) {
     switch(e.which) {
         case 83: // up
@@ -304,7 +304,7 @@ function webSlide(){
       homeSlides();
 
       createLanding();
-      
+
     });
 }
 function mobileSlide(){
@@ -505,7 +505,7 @@ function checkUser(url, link){
     if (currentUser) {
         window.location = link;
     } else {
-        
+
         window.location = url+"?url="+encodeURIComponent(link);
 
     }
@@ -527,14 +527,14 @@ function login(username,password){
             currentUser();
             //if (activation){
                 checkedUrl = checkUrl(url);
-                
+
                 if(checkedUrl){
                     window.location = url;
                 }
 
             //}
             $("#success").text("loggedin").fadeIn();
-        
+
         },
         error: function(user, error) {
 
@@ -575,11 +575,11 @@ function checkPrivatePage(){
         if (currentUser) {
 
         } else {
-            window.location = loginUrl+"?url="+encodeURIComponent(pathname);    
-            
+            window.location = loginUrl+"?url="+encodeURIComponent(pathname);
+
         }
 
-    }   
+    }
 }
 function activateButtons(){
     $("a.prevent").removeClass("prevent");
@@ -598,16 +598,16 @@ function hidePrivateSection(){
         $(".slide.alone").each(function(){
             var html = $(this).html();
             var id = $(this).attr("id");
-            
+
             $(this).parent().attr("id",id).html(html);
             $(this).remove();
         })
        $(".slide.private").each(function(){
         $(this).remove();
-        }) 
+        })
     }else{
         activateButtons();
        }
-    
+
 
 }
