@@ -398,7 +398,7 @@ section.center
 
 
 //se attivo below(980) funziona sotto 980 poi crasha MA sotto 480 pure
-+above(480px)
++below(980px)
     .scroll
         display block
     div#landing-menu
@@ -415,10 +415,11 @@ section.center
             column(8/12)
             shift(2/12)
         ul#intro-menu
-            column(2/12)
-            shift(2/12)
+            column(3/12)
+            shift(1/12)
             padding-top 15px
             position relative
+            margin 0
             li
                 width 100%
                 margin-right 0
@@ -451,3 +452,9 @@ section.center
                 margin-bottom 0
                 span
                     padding 0 18%
+
+      .con-menu
+        div
+          section.center
+            div.main-text
+              column(6/12)
