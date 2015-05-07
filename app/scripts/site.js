@@ -137,9 +137,18 @@ $(document).ready(function() {
             login("equinoxe","3qu1n0x3");
         break;
     }
-    e.preventDefault(); // prevent the default action (scroll / move caret)
+    //e.preventDefault(); // prevent the default action (scroll / move caret)
 });
-    
+    //login forn
+    $("#login-form").find(".btn").click(function(e){
+
+        var username = $("#login-username").val();
+        var password = $("#login-password").val();
+
+        e.preventDefault();
+        login( username, password);
+    });
+
   $(".section .slide a.button").click(function(e){
     e.preventDefault();
 
@@ -410,6 +419,7 @@ function checkPage(size){
             });
     }else if(pathArray[2] == "login.html"){
         $('a#m1').addClass("active");
+        $('div#hslide1').fadeIn(1000);
             $('#onepage').fullpage({
                 menu: '#anchor-menu',
                 anchors:['login'],
@@ -508,18 +518,18 @@ function login(username,password){
 
             //if (activation){
                 checkedUrl = checkUrl(url);
-                currentUser()
+                
                 if(checkedUrl){
                     window.location = url;
                 }
 
             //}
+            $("#success").text("loggedin").fadeIn();
+        
         },
         error: function(user, error) {
+
             $("#error").text("Error: " + error.code + " " + error.message).fadeIn();
-
-
-
         }
     });
 }
