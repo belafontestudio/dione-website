@@ -10,10 +10,15 @@
 
 
 
+
+.prevent
+  opacity .5 !important
+  cursor default
+
 ///FORM
 form
     margin-top 200px
-    input 
+    input
         color black
 
 a
@@ -371,15 +376,17 @@ section.center
 
 
 //Responsive tries
-+above(980px)
-    div.main-text.home
-        position relative
-        column(8/12)
-        shift(2/12)
-        p
-          column(8/8)
-          shift(2/8)
-          margin-bottom 60px
+
+// questo fa impazzire main-text .home
+// +above(980px)
+//     div.main-text.home
+//         position relative
+//         column(8/12)
+//         shift(2/12)
+//         p
+//           column(8/8)
+//           shift(2/8)
+//           margin-bottom 60px
 
 // +below(980px)
 //     div.main-text.home
@@ -465,3 +472,19 @@ section.center
           section.center
             div.main-text
               column(6/12)
+
+              h1
+                font-size 3.5em
+                margin-bottom 15px
+                line-height 4rem
+
+
++below(1280px)
+  .con-menu
+    div
+      section.center
+        div.main-text
+          h1
+            font-size 4.5em
+            margin-bottom 22px
+            line-height 4.2rem
