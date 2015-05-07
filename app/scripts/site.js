@@ -595,7 +595,13 @@ function preventPrivateSection(){
 function hidePrivateSection(){
     var isLogged = isLoggedIn();
     if(!isLogged){
-
+        $(".slide.alone").each(function(){
+            var html = $(this).html();
+            var id = $(this).attr("id");
+            
+            $(this).parent().attr("id",id).html(html);
+            $(this).remove();
+        })
        $(".slide.private").each(function(){
         $(this).remove();
         }) 
