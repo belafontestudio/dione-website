@@ -1,4 +1,4 @@
-
+Parse.initialize("AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0", "Hf6uvBRtwY4se7DKWfqckvFkpN4TktNb9PpKdXc9");
 
 //Resize
 $( window ).resize(function() {
@@ -10,6 +10,10 @@ $( window ).resize(function() {
 
 });
 
+var pathname = window.location.pathname;
+var loginUrl = "/pages/login.html";
+var registerUrl = "/register.html";
+checkPrivatePage();
 
 
 
@@ -119,8 +123,23 @@ function rangeSlider(){
     $( "p.min-price" ).text( "€" + $( "#slider-range" ).slider( "values", 0 )+ "k");
     $( "p.max-price" ).text( "€" + $( "#slider-range" ).slider( "values", 1 )+ "k");
 }
-$(document).ready(function() {
 
+
+$(document).ready(function() {
+    preventPrivateSection();
+    
+    $(document).keydown(function(e) {
+    switch(e.which) {
+        case 83: // up
+            logout();
+        break;
+        case 65:
+            login("equinoxe","3qu1n0x3");
+        break;
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+    
   $(".section .slide a.button").click(function(e){
     e.preventDefault();
 
@@ -274,18 +293,23 @@ function hasFullPage(page){
 function webSlide(){
     $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){
       homeSlides();
+
       createLanding();
+      
     });
 }
 function mobileSlide(){
     $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){
         homeSlides();
+
         createLanding();
+
     });
 }
 
 
 function checkPage(size){
+    hidePrivateSection();
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
 
@@ -430,3 +454,126 @@ $('#dropdown-selector').hover(function() {
     // Animation complete.
   })
 });
+
+
+
+//PARSE
+
+
+function checkUrl(url){
+    console.log(url);
+    if (url != ""){
+      return true;
+    }else{
+      return false
+    }
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+function currentUser(){
+    var currentUser = Parse.User.current();
+    console.log(JSON.stringify(currentUser));
+}
+function checkUser(url, link){
+    var currentUser = Parse.User.current();
+    if (currentUser) {
+        window.location = link;
+    } else {
+        
+        window.location = url+"?url="+encodeURIComponent(link);
+
+    }
+}
+function logout(){
+    Parse.User.logOut();
+    console.log("logout")
+}
+
+
+
+
+function login(username,password){
+    Parse.User.logIn(username, password, {
+        success: function(user) {
+
+            //var activation = activate(user._serverData.emailVerified);
+            var url = getParameterByName('url');
+
+            //if (activation){
+                checkedUrl = checkUrl(url);
+                currentUser()
+                if(checkedUrl){
+                    window.location = url;
+                }
+
+            //}
+        },
+        error: function(user, error) {
+            $("#error").text("Error: " + error.code + " " + error.message).fadeIn();
+
+
+
+        }
+    });
+}
+
+
+
+function signup(username, company, email, password){
+    var user = new Parse.User();
+    user.set("username", email);
+    user.set("name_lastname", username);
+    user.set("password", password);
+    user.set("company", company);
+    user.set("email", email);
+    user.signUp(null, {
+        success: function(user) {
+            $("#success").fadeIn();
+
+            window.location = soluzioniUrl;
+
+        },
+        error: function(user, error) {
+            // Show the error message somewhere and let the user try again.
+            $("#error").text("Error: " + error.code + " " + error.message).fadeIn();
+
+        }
+    });
+}
+
+function checkPrivatePage(){
+    console.log(window.location.pathname)
+        if(window.location.pathname == "/pages/inside.html"){
+
+        var currentUser = Parse.User.current();
+        if (currentUser) {
+
+        } else {
+            window.location = loginUrl+"?url="+encodeURIComponent(pathname);    
+            
+        }
+
+    }   
+}
+
+function preventPrivateSection(){
+    $("a.prevent").click(function(e){
+        e.preventDefault();
+        var link = $(this).attr("href");
+        checkUser(loginUrl,link)
+    })
+
+}
+function hidePrivateSection(){
+    $(".slide.private").each(function(){
+        $(this).remove();
+    })
+
+}

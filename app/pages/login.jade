@@ -4,4 +4,11 @@ extends ./layouts/_general.jade
 block menu 
   include ./partials/_menu_login.jade
 block body
-  #onepage
+  section.center
+    form#login-form.contact-form
+      input#login-username.form-name(name="user", placeholder="user", type="text")/
+      input#login-password.form-email(name="password", placeholder="password", type="password")/
+      .button-container
+        button.btn
+          | login
+
