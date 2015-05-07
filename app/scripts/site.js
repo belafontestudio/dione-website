@@ -153,10 +153,10 @@ $(document).ready(function() {
     e.preventDefault();
 
     var selection = $(this).attr("href");
-    var section = selection.substring(1, 1);
-    var slide = selection.substring(2, 1);
+    var section = selection.substring(1, 2);
+    var slide = selection.substring(2);
     console.log(section,slide)
-    $.fn.fullpage.moveTo();
+    $.fn.fullpage.moveTo(section,slide);
 
   });
 
