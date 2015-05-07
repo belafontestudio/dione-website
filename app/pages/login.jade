@@ -4,11 +4,19 @@ extends ./layouts/_general.jade
 block menu 
   include ./partials/_menu_login.jade
 block body
-  section.center
-    form#login-form.contact-form
-      input#login-username.form-name(name="user", placeholder="user", type="text")/
-      input#login-password.form-email(name="password", placeholder="password", type="password")/
-      .button-container
-        button.btn
-          | login
+  #onepage
+    .section
+      section.center
+       
+        form#login-form.contact-form
+          #error.alert.alert-danger
+            a.close("data-dismiss" = "alert", href= "#") ×
+          #success.alert.alert-success
+            a.close("data-dismiss" = "alert", href= "#") ×
+          input#login-username.form-name(name="user", placeholder="user", type="text")/
+          input#login-password.form-email(name="password", placeholder="password", type="password")/
+          .button-container
+            button.btn
+              | login
+      div.hslide#hslide1.bg-img-slide(style="background-image:url('/images/landing/Intro_Home.jpg')")
 
