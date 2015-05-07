@@ -533,12 +533,14 @@ function login(username,password){
                 }
 
             //}
-            $("#success").text("loggedin").fadeIn();
+            $("#success").delay(500).fadeIn();
+            $('#error').fadeOut();
 
         },
         error: function(user, error) {
 
-            $("#error").text("Error: " + error.code + " " + error.message).fadeIn();
+            $("#error").delay(500).fadeIn();
+            $('#success').fadeOut();
         }
     });
 }

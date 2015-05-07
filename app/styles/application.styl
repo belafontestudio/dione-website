@@ -328,7 +328,7 @@ section.center
                 margin-right 0
         div.main-text
             column(8/12)
-            shift(2/12)
+            shift(1.5/12)
             border-left 1px solid white
             padding-left 30px
             h1
@@ -375,7 +375,7 @@ section.center
         center(1400px, 0px)
         ul#anchor-menu
             column(8/12)
-            shift(12/12)
+            shift(2/12)
             li
                 margin-right: 45px
 
@@ -385,7 +385,7 @@ section.center
             column(8/12)
             shift(2/12)
         ul#intro-menu
-            column(2/12)
+            column(3/12)
             shift(2/12)
             padding-top 15px
             position relative
@@ -424,8 +424,68 @@ section.center
 
 
 +desktop()
-  // Dropdown menu
 
+  .scroll
+      display block
+  div#landing-menu
+      center(1400px, 0px)
+      ul#anchor-menu
+          column(8/12)
+          shift(2/12)
+          li
+              margin-right: 45px
+
+  section.center
+      center(1400px, 0px)
+      ul#anchor-menu
+          column(8/12)
+          shift(2/12)
+      ul#intro-menu
+          column(2/12)
+          shift(2/12)
+          padding-top 15px
+          position relative
+          li
+              width 100%
+              margin-right 0
+      div.main-text
+          column(7/12)
+          shift(2/12)
+          border-left 1px solid white
+          padding-left 30px
+          h1
+              //column(8/12)
+              font-size rem(105px)
+              line-height rem(93px)
+          p
+            //column(9/12)
+          // .fly
+          //   columns(12/12)
+      div.main-text.home
+          position relative
+          column(8/12)
+          shift(2/12)
+          text-align center
+          border 1px solid white
+          padding 30px 0
+          h1
+              margin-bottom 44px
+              //columns(12/12)
+          // p
+          //     column(4/8)
+          //     shift(2/8)
+          //     margin-bottom 60px
+          p.subtitle
+              margin-bottom 40px
+          p.length
+              column(6/8)
+              shift(1/8)
+              margin-bottom 0
+              span
+                  padding 0 18%
+
+
+  // Dropdown menu
   #m20
     cursor pointer
 
@@ -514,3 +574,63 @@ section.center
 
 
 // LOGIN
+
+
+#login-form
+    font-family "Alegreya Sans", "Helvetica Neue", sans-serif
+    font-weight light
+    margin-top 0 !important
+    text-align left
+    width 320px
+    height 300px
+    position relative
+    left 16.166667%
+    .login-elements
+      padding 10px
+      width 100%
+      label
+        //
+
+      input
+        font-family "Alegreya Sans", "Helvetica Neue", sans-serif
+        border 0
+        display block
+        padding 10px 10px 5px 5px
+        width 100%
+        margin-top 8px
+        //align(both)
+      .btn
+        margin 0 auto
+        border 0
+        padding 8px 30px
+        background #9dd2cc
+        color white
+      .button-container
+        width 100px !important
+        .btn
+          float left
+
+
+
+
+    #error
+      display none
+      position relative
+      bottom 29px
+      left 120px
+      font-size 1.3em
+      color white
+      &:before
+      font-family FontAwesome
+        content '\f071  '
+
+    #success
+      display none
+      position relative
+      bottom 29px
+      left 120px
+      font-size 1.3em
+      color white
+      &:before
+      font-family FontAwesome
+        content '\f14a  '
