@@ -491,6 +491,15 @@ function currentUser(){
     var currentUser = Parse.User.current();
     console.log(JSON.stringify(currentUser));
 }
+
+function isLoggedIn(){
+    var currentUser = Parse.User.current();
+    if (currentUser) {
+        return true
+    } else {
+        return false
+    }
+}
 function checkUser(url, link){
     var currentUser = Parse.User.current();
     if (currentUser) {
@@ -515,7 +524,7 @@ function login(username,password){
 
             //var activation = activate(user._serverData.emailVerified);
             var url = getParameterByName('url');
-
+            currentUser();
             //if (activation){
                 checkedUrl = checkUrl(url);
                 
@@ -572,7 +581,9 @@ function checkPrivatePage(){
 
     }   
 }
-
+function activateButtons(){
+    $("a.prevent").removeClass(".prevent");
+}
 function preventPrivateSection(){
     $("a.prevent").click(function(e){
         e.preventDefault();
@@ -582,8 +593,15 @@ function preventPrivateSection(){
 
 }
 function hidePrivateSection(){
-    $(".slide.private").each(function(){
+    var isLogged = isLoggedIn();
+    if(!isLogged){
+
+       $(".slide.private").each(function(){
         $(this).remove();
-    })
+        }) 
+    }else{
+        activateButtons();
+       }
+    
 
 }
