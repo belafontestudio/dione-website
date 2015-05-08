@@ -292,7 +292,12 @@ function createLanding(){
                     //Going to section 2!
                     $('#section'+nextIndex).find('.slide').addClass('loadImage');
                 }
-                console.log(index, nextIndex, direction);
+                 if(direction =='up'){
+                        //Going to section 2!
+                        if(!$('#section'+nextIndex).find('.slide').hasClass('loadImage')){
+                            $('#section'+nextIndex).find('.slide').addClass('loadImage');
+                        }
+                    }
 
 
         }
@@ -358,6 +363,12 @@ function checkPage(size){
                     //Going to section 2!
                     $('.section'+nextIndex).find('.slide').addClass('loadImage');
                 }
+                 if(direction =='up'){
+                        //Going to section 2!
+                        if(!$('.section'+nextIndex).find('.slide').hasClass('loadImage')){
+                            $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                        }
+                    }
                 
             }
 
@@ -391,7 +402,7 @@ function checkPage(size){
                         }
                     }
                  
-                    console.log(index, nextIndex, direction)
+                   
                 }
             
             
