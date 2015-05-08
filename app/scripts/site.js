@@ -127,6 +127,7 @@ function rangeSlider(){
 
 $(document).ready(function() {
     preventPrivateSection();
+    logoutButton();
 
     $(document).keydown(function(e) {
     switch(e.which) {
@@ -287,7 +288,11 @@ function createLanding(){
                 if (hmenu.hasClass('show')){
                     hmenu.removeClass('show');
                 }
-
+                if(direction =='down'){
+                    //Going to section 2!
+                    $('#section'+nextIndex).find('.slide').addClass('loadImage');
+                }
+                console.log(index, nextIndex, direction);
 
 
         }
@@ -324,8 +329,10 @@ function checkPage(size){
 
         if (size == "web"){
             webSlide();
+            
         }else if (size == "mobile"){
            mobileSlide();
+
         }
 
 
@@ -344,8 +351,18 @@ function checkPage(size){
             loopHorizontal: false,
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
+            
+            onLeave: function(index, nextIndex, direction){
+            
+                if(direction =='down'){
+                    //Going to section 2!
+                    $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                }
+                
+            }
 
 
+        
         });
     }else if(pathArray[2] == "life_on_board.html"){
             $('a#m1').addClass("active");
@@ -361,7 +378,23 @@ function checkPage(size){
                 loopHorizontal: false,
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
-
+                onLeave: function(index, nextIndex, direction){
+            
+                    if(direction =='down'){
+                        //Going to section 2!
+                        $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                    }
+                    if(direction =='up'){
+                        //Going to section 2!
+                        if(!$('.section'+nextIndex).find('.slide').hasClass('loadImage')){
+                            $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                        }
+                    }
+                 
+                    console.log(index, nextIndex, direction)
+                }
+            
+            
 
             });
     }else if(pathArray[2] == "logbook.html"){
@@ -378,7 +411,21 @@ function checkPage(size){
                 loopHorizontal: false,
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
-
+                onLeave: function(index, nextIndex, direction){
+            
+                    if(direction =='down'){
+                        //Going to section 2!
+                        $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                    }
+                    if(direction =='up'){
+                        //Going to section 2!
+                        if(!$('.section'+nextIndex).find('.slide').hasClass('loadImage')){
+                            $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                        }
+                    }
+                }
+                
+            
 
             });
     }else if(pathArray[2] == "events.html"){
@@ -396,7 +443,15 @@ function checkPage(size){
                 loopHorizontal: false,
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
-
+                onLeave: function(index, nextIndex, direction){
+            
+                    if(direction =='down'){
+                        //Going to section 2!
+                        $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                    }
+                }
+             
+            
 
             });
     }else if(pathArray[2] == "specs.html"){
@@ -414,7 +469,15 @@ function checkPage(size){
                 loopHorizontal: false,
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
-
+                onLeave: function(index, nextIndex, direction){
+            
+                    if(direction =='down'){
+                        //Going to section 2!
+                        $('.section'+nextIndex).find('.slide').addClass('loadImage');
+                    }
+                }
+   
+            
 
             });
     }else if(pathArray[2] == "login.html"){
@@ -530,6 +593,8 @@ function login(username,password){
 
                 if(checkedUrl){
                     window.location = url;
+                }else{
+                    window.location = "/pages/landing.html";
                 }
 
             //}
@@ -583,6 +648,10 @@ function checkPrivatePage(){
 
     }
 }
+
+
+
+
 function activateButtons(){
     $("a.prevent").removeClass("prevent");
 }
@@ -594,9 +663,21 @@ function preventPrivateSection(){
     })
 
 }
+
+function logoutButton(){
+    $("li.logout a").click(function(e){
+        e.preventDefault();
+        console.log("logout button clicked")
+        logout();
+        location.reload();
+    })
+
+}
 function hidePrivateSection(){
     var isLogged = isLoggedIn();
     if(!isLogged){
+        $("li.logout a").hide();
+        $("li.login a").show();
         $(".slide.alone").each(function(){
             var html = $(this).html();
             var id = $(this).attr("id");
@@ -609,6 +690,8 @@ function hidePrivateSection(){
         })
     }else{
         activateButtons();
+        $("li.logout a").show();
+        $("li.login a").hide();
        }
 
 
