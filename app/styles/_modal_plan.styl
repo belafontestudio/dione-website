@@ -1,12 +1,68 @@
-#plan-modal
+.jquery-modal
+  z-index 10 !important
 
+#plan-modal
   width 90%
   height 90%
   position relative
   top 5%
   left 5%
+  z-index 20 !important
   margin 0 auto
   box-shadow none
-  padding 30px
+  padding 300px
   background white
-  
+  img
+    max-width 90%
+    align(both)
+
+  .menu-plan
+    position absolute
+    bottom 10px
+    left 20px
+    z-index 40
+    li
+      display inline-block
+
+      margin 5px
+
+
+
+    a
+        padding 10px 20px
+        background-color light-blue
+        opacity .6
+        outline 0
+        font-family: 'futura_bqregular', sans-serif
+        font-weight normal !important
+        text-rendering optimizeLegibility
+        color white
+        font-size 15px
+        line-height 15px
+        letter-spacing 1.8px
+        text-transform uppercase
+        text-decoration none
+        &.active, &:hover, &:active
+            //color light-blue
+            opacity 1
+            background-color #9CD2CC
+            border-bottom 1px solid light-blue
+        &.active
+            opacity 1
+            background-color #9CD2CC
+            border-bottom 1px solid light-blue
+    .active
+      opacity 1
+
+
+
+.modal a.close-modal
+  position absolute
+  top 18px
+  right 18px
+  display block
+  width 30px
+  height 30px
+  text-indent -9999px
+  background url("../images/sprite/close.png") no-repeat  0 0
+  background-size cover
