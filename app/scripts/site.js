@@ -1,5 +1,14 @@
 Parse.initialize("AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0", "Hf6uvBRtwY4se7DKWfqckvFkpN4TktNb9PpKdXc9");
 
+
+var pinsPositions = 
+{
+"21":{x:20,y:30},
+"22":{x:21,y:31},
+"23":{x:60,y:40},
+"33":{x:30,y:20}
+}
+
 //Resize
 $( window ).resize(function() {
 
@@ -128,6 +137,8 @@ function rangeSlider(){
 $(document).ready(function() {
     preventPrivateSection();
     logoutButton();
+    planSetup();
+    getPlanPins();
 
     $(document).keydown(function(e) {
     switch(e.which) {
@@ -729,33 +740,100 @@ function hidePrivateSection(){
 
 
 //
+function getPlanPins(){
+    $(document).on('click', 'a.see-plan', function(e) {
+            var deck = $(this).attr("data-deck");
+            var pins = $(this).attr("data-pin");
+            displayPins(pins);
+            displayDeck(deck);
+        });
 
+}
+function displayPins(pins){
+    var pinsArray = JSON.parse("[" + pins + "]")
+    for (var i in pinsArray) {
+      var pin = pinsArray[i].toString();
 
+      var pinDeck = pin.substring(0,1);
+      var pinDot = pin.substring(1,2);
+      console.log(pinsPositions[pin].x);
+          switch(parseInt(pinDeck)){
+            case 1:
+                $("#sundeck").prepend('<div class="dot" style="top:'+pinsPositions[pin].x+'%; left:'+pinsPositions[pin].y+'%"></div>');
+            break;
+            case 2:
+                $("#maindeck").prepend('<div class="dot" style="top:'+pinsPositions[pin].x+'%; left:'+pinsPositions[pin].y+'%"></div>');
+            break;
+            case 3:
+                $("#lowerdeck").prepend('<div class="dot" style="top:'+pinsPositions[pin].x+'%; left:'+pinsPositions[pin].y+'%"></div>');
+            break;
+        }
+    }
+    
+
+}
+function displayDeck(deck){
+     
+    switch(parseInt(deck)){
+        case 1:
+            $('#sundeck').fadeIn();
+            $('#maindeck, #lowerdeck').fadeOut();
+
+            $('#btn_sun').addClass('active');
+            $('#btn_main, #btn_low').removeClass('active');
+        break;
+        case 2:
+            $('#maindeck').fadeIn();
+            $('#sundeck, #lowerdeck').fadeOut();
+
+            $('#btn_main').addClass('active');
+            $('#btn_sun, #btn_low').removeClass('active');
+        break;
+        case 3:
+            $('#lowerdeck').fadeIn();
+            $('#sundeck, #maindeck').fadeOut();
+
+            $('#btn_low').addClass('active');
+            $('#btn_sun, #btn_main').removeClass('active');
+        break;
+        default:
+
+            $('#sundeck').fadeIn();
+            $('#maindeck, #lowerdeck').fadeOut();
+
+            $('#btn_sun').addClass('active');
+            $('#btn_main, #btn_low').removeClass('active');
+        break;
+    }
+}
 
 // Switch Plan
-$('#btn_sun').on('click', function(){
+function planSetup(){
 
-  $('#sundeck').fadeIn();
-  $('#maindeck, #lowerdeck').fadeOut();
+    $('#btn_sun').on('click', function(){
 
-  $('#btn_sun').addClass('active');
-  $('#btn_main, #btn_low').removeClass('active');
-});
+      $('#sundeck').fadeIn();
+      $('#maindeck, #lowerdeck').fadeOut();
 
-$('#btn_main').on('click', function(){
-  $('#maindeck').fadeIn();
-  $('#sundeck, #lowerdeck').fadeOut();
+      $('#btn_sun').addClass('active');
+      $('#btn_main, #btn_low').removeClass('active');
+    });
 
-  $('#btn_main').addClass('active');
-  $('#btn_sun, #btn_low').removeClass('active');
+    $('#btn_main').on('click', function(){
+      $('#maindeck').fadeIn();
+      $('#sundeck, #lowerdeck').fadeOut();
 
-});
+      $('#btn_main').addClass('active');
+      $('#btn_sun, #btn_low').removeClass('active');
 
-$('#btn_low').on('click', function(){
-  $('#lowerdeck').fadeIn();
-  $('#sundeck, #maindeck').fadeOut();
+    });
 
-  $('#btn_low').addClass('active');
-  $('#btn_sun, #btn_main').removeClass('active');
+    $('#btn_low').on('click', function(){
+      $('#lowerdeck').fadeIn();
+      $('#sundeck, #maindeck').fadeOut();
 
-});
+      $('#btn_low').addClass('active');
+      $('#btn_sun, #btn_main').removeClass('active');
+
+    }); 
+}
