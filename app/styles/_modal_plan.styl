@@ -1,5 +1,7 @@
 .jquery-modal
   z-index 10 !important
+.see-plan
+  color light-blue
 
 #plan-modal
   width 90%
@@ -10,7 +12,7 @@
   z-index 20 !important
   margin 0 auto
   box-shadow none
-  padding 300px
+  padding 0
   background white
   img
     max-width 90%
@@ -77,9 +79,46 @@
 ///// DOTS
 
 .dot
-  width 12px
-  height 12px
-  border-radius 100%
-  background-color yellow
-  position absolute
+  // width 16px
+  // height 16px
+  // border-radius 100%
+  background-color #2980b9
+  border 3px solid #3498db
+  -webkit-border-radius 100%
+  height 21px
+  width 21px
+
+  animation pulsate 1.4s ease-out
+  animation-iteration-count infinite
+  opacity 0.0
+
   z-index 211
+
+@keyframes pulsate
+  0% {
+  -webkit-transform scale(0.1, 0.1)
+  opacity 0.0
+  }
+  50% {
+    opacity 1.0
+  }
+  100% {
+    -webkit-transform scale(1.5, 1.5)
+    opacity 0.0
+  }
+
+
+#sun-dot
+    position absolute
+    top 20%
+    left 25%
+
+#main-dot
+    position absolute
+    top 50%
+    left 80%
+
+#low-dot
+    position absolute
+    top 69%
+    left 50%
