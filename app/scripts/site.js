@@ -175,6 +175,10 @@ $(document).ready(function() {
     $.fn.fullpage.moveTo(section,slide);
 
   });
+    $('#plan-modal').on($.modal.CLOSE, function(event, modal) {
+      console.log("Pins cleaned")
+      cleanPins();
+    })
 
 
     filterMenu();
@@ -743,7 +747,12 @@ function hidePrivateSection(){
 // };
 
 
-//
+function cleanPins(){
+    $("#sundeck").find(".dot").remove();
+    $("#maindeck").find(".dot").remove();
+    $("#lowerdeck").find(".dot").remove();
+}
+
 function getPlanPins(){
     $(document).on('click', 'a.see-plan', function(e) {
             var deck = $(this).attr("data-deck");
