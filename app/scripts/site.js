@@ -6,7 +6,7 @@ var pinsPositions =
 "21":{x:20,y:30},
 "22":{x:21,y:31},
 "23":{x:60,y:40},
-"33":{x:30,y:20}
+"333":{x:30,y:20}
 }
 
 //Resize
@@ -755,8 +755,8 @@ function displayPins(pins){
       var pin = pinsArray[i].toString();
 
       var pinDeck = pin.substring(0,1);
-      var pinDot = pin.substring(1,2);
-      console.log(pinsPositions[pin].x);
+      
+      console.log(pin,pinDeck, pinsPositions[pin].x,pinsPositions[pin].y);
           switch(parseInt(pinDeck)){
             case 1:
                 $("#sundeck").prepend('<div class="dot" style="top:'+pinsPositions[pin].x+'%; left:'+pinsPositions[pin].y+'%"></div>');
