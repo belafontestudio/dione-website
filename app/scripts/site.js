@@ -143,6 +143,11 @@ $(document).ready(function() {
     planSetup();
     getPlanPins();
 
+    $('#plan-modal').on($.modal.CLOSE, function(event, modal) {
+      console.log("Pins cleaned")
+      cleanPins();
+    });
+    
     $(document).keydown(function(e) {
     switch(e.which) {
         case 83: // up
@@ -179,6 +184,8 @@ $(document).ready(function() {
     filterMenu();
     rangeSlider();
     guestSlider();
+
+
     $( "#slider-single" ).slider({
          min: 0,
          max: 2,
@@ -742,7 +749,15 @@ function hidePrivateSection(){
 // };
 
 
-//
+$('#plan-modal').on($.modal.CLOSE, function(event, modal) {
+  cleanPins();
+});
+
+function cleanPins(){
+    $("#sundeck").find(".dot").remove();
+    $("#maindeck").find(".dot").remove();
+    $("#lowerdeck").find(".dot").remove();
+}
 function getPlanPins(){
     $(document).on('click', 'a.see-plan', function(e) {
             var deck = $(this).attr("data-deck");
