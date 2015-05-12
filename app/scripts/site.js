@@ -4,7 +4,7 @@ Parse.initialize("AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0", "Hf6uvBRtwY4se7DKWf
 var pinsPositions =
 {
   "11":{x:49,y:41.5},
-  "12":{x:49,y:18},
+  "12":{x:49,y:53.5},
 
   "21":{x:49,y:18},
   "22":{x:21,y:31},
@@ -143,11 +143,6 @@ $(document).ready(function() {
     planSetup();
     getPlanPins();
 
-    $('#plan-modal').on($.modal.CLOSE, function(event, modal) {
-      console.log("Pins cleaned")
-      cleanPins();
-    });
-    
     $(document).keydown(function(e) {
     switch(e.which) {
         case 83: // up
@@ -184,8 +179,6 @@ $(document).ready(function() {
     filterMenu();
     rangeSlider();
     guestSlider();
-
-
     $( "#slider-single" ).slider({
          min: 0,
          max: 2,
@@ -749,15 +742,7 @@ function hidePrivateSection(){
 // };
 
 
-$('#plan-modal').on($.modal.CLOSE, function(event, modal) {
-  cleanPins();
-});
-
-function cleanPins(){
-    $("#sundeck").find(".dot").remove();
-    $("#maindeck").find(".dot").remove();
-    $("#lowerdeck").find(".dot").remove();
-}
+//
 function getPlanPins(){
     $(document).on('click', 'a.see-plan', function(e) {
             var deck = $(this).attr("data-deck");
