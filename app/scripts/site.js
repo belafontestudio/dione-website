@@ -1,9 +1,9 @@
 Parse.initialize("AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0", "Hf6uvBRtwY4se7DKWfqckvFkpN4TktNb9PpKdXc9");
 
 
-var pinsPositions = 
+var pinsPositions =
 {
-"21":{x:20,y:30},
+"21":{x:49,y:18},
 "22":{x:21,y:31},
 "23":{x:60,y:40},
 "33":{x:30,y:20}
@@ -769,11 +769,11 @@ function displayPins(pins){
             break;
         }
     }
-    
+
 
 }
 function displayDeck(deck){
-     
+
     switch(parseInt(deck)){
         case 1:
             $('#sundeck').fadeIn();
@@ -835,5 +835,5 @@ function planSetup(){
       $('#btn_low').addClass('active');
       $('#btn_sun, #btn_main').removeClass('active');
 
-    }); 
+    });
 }
