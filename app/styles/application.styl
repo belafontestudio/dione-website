@@ -163,6 +163,10 @@ a#simple-menu
 
 section.center
 
+    ul#anchor-menu
+        column(8/12)
+        shift(2/12)
+
     z-index 2
     padding 0 20px
     ul#intro-menu
@@ -312,7 +316,7 @@ section.center
         center(980px, 0px)
         ul#anchor-menu
             column(9/12)
-            shift(1/12)
+            shift(2/12)
             li
                 margin-right: 45px
 
@@ -499,6 +503,8 @@ section.center
                   padding 0 18%
 
 
+
+
   .desk-col
     div
       .section.center
@@ -510,9 +516,54 @@ section.center
 
 
 
+  // // Dropdown menu
+  // #m20
+  //   cursor pointer
+  //
+  //
+  // #dropdown-menu
+  //   border-top 1px solid white
+  //   padding 0
+  //   padding-left 30px
+  //   padding-top 5px
+  //   position absolute
+  //   top 21px
+  //   left 0
+  //   -webkit-box-shadow: none
+  //   -moz-box-shadow none
+  //   box-shadow none
+  //   display none
+  //   //opacity 0
+  //   //visibility hidden
+  //   -webkit-transiton opacity 0.2s
+  //   -moz-transition opacity 0.2s
+  //   -ms-transition opacity 0.2s
+  //   -o-transition opacity 0.2s
+  //   -transition opacity 0.2s
+  .con-menu
+    div
+      section.center
+        div.main-text
+          h1
+            font-size 4.5em
+            margin-bottom 22px
+            line-height 4.2rem
+
+
+
++below(1280px)
+  #m20
+    display none
+
+  #dropdown-menu
+    display inline-block !important
+
+//ok
++above(1280px)
   // Dropdown menu
   #m20
     cursor pointer
+    display inline-block
 
 
   #dropdown-menu
@@ -534,56 +585,9 @@ section.center
     -ms-transition opacity 0.2s
     -o-transition opacity 0.2s
     -transition opacity 0.2s
-  .con-menu
-    div
-      section.center
-        div.main-text
-          h1
-            font-size 4.5em
-            margin-bottom 22px
-            line-height 4.2rem
 
 
 
-
-
-//Responsive tries
-
-// questo fa impazzire main-text .home
-// +above(980px)
-//     div.main-text.home
-//         position relative
-//         column(8/12)
-//         shift(2/12)
-//         p
-//           column(8/8)
-//           shift(2/8)
-//           margin-bottom 60px
-
-// +below(980px)
-//     div.main-text.home
-//         position relative
-//         column(4/12)
-//         shift(2/12)
-//         p
-//           column(4/12)
-//           shift(1/8)
-//           margin-bottom 40px
-//         //  width 80% !important
-//
-//
-//     div.main-text
-//         position relative
-//         column(12/12)
-//         shift(2/12)
-//         p
-//           column(8/8)
-//           shift(0/8)
-//           margin-bottom 40px
-//         //  width 80% !important
-
-
-//se attivo below(980) funziona sotto 980 poi crasha MA sotto 480 pure
 
 
 
