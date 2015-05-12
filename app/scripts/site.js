@@ -334,7 +334,7 @@ function checkPage(size){
 
         if (size == "web"){
             webSlide();
-            
+
         }else if (size == "mobile"){
            mobileSlide();
 
@@ -356,9 +356,9 @@ function checkPage(size){
             loopHorizontal: false,
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
-            
+
             onLeave: function(index, nextIndex, direction){
-            
+
                 if(direction =='down'){
                     //Going to section 2!
                     $('.section'+nextIndex).find('.slide').addClass('loadImage');
@@ -369,11 +369,11 @@ function checkPage(size){
                             $('.section'+nextIndex).find('.slide').addClass('loadImage');
                         }
                     }
-                
+
             }
 
 
-        
+
         });
     }else if(pathArray[2] == "life_on_board.html"){
             $('a#m1').addClass("active");
@@ -390,7 +390,7 @@ function checkPage(size){
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
                 onLeave: function(index, nextIndex, direction){
-            
+
                     if(direction =='down'){
                         //Going to section 2!
                         $('.section'+nextIndex).find('.slide').addClass('loadImage');
@@ -401,11 +401,11 @@ function checkPage(size){
                             $('.section'+nextIndex).find('.slide').addClass('loadImage');
                         }
                     }
-                 
-                   
+
+
                 }
-            
-            
+
+
 
             });
     }else if(pathArray[2] == "logbook.html"){
@@ -423,7 +423,7 @@ function checkPage(size){
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
                 onLeave: function(index, nextIndex, direction){
-            
+
                     if(direction =='down'){
                         //Going to section 2!
                         $('.section'+nextIndex).find('.slide').addClass('loadImage');
@@ -435,8 +435,8 @@ function checkPage(size){
                         }
                     }
                 }
-                
-            
+
+
 
             });
     }else if(pathArray[2] == "events.html"){
@@ -455,14 +455,14 @@ function checkPage(size){
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
                 onLeave: function(index, nextIndex, direction){
-            
+
                     if(direction =='down'){
                         //Going to section 2!
                         $('.section'+nextIndex).find('.slide').addClass('loadImage');
                     }
                 }
-             
-            
+
+
 
             });
     }else if(pathArray[2] == "specs.html"){
@@ -481,14 +481,14 @@ function checkPage(size){
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
                 onLeave: function(index, nextIndex, direction){
-            
+
                     if(direction =='down'){
                         //Going to section 2!
                         $('.section'+nextIndex).find('.slide').addClass('loadImage');
                     }
                 }
-   
-            
+
+
 
             });
     }else if(pathArray[2] == "login.html"){
@@ -707,3 +707,55 @@ function hidePrivateSection(){
 
 
 }
+
+
+// Planimetria
+
+// function select_plan(target){
+//     var counter = 1;
+//
+//         $('#menu-plan > li > a').each(function(){
+//             if (counter != target){
+//                 $('#plan-modal > div').removeClass("unactive");
+//
+//             }else{
+//                 $(this).parent().addClass("active");
+//
+//             }
+//
+//             counter++;
+//         });
+// };
+
+
+//
+
+
+
+// Switch Plan
+$('#btn_sun').on('click', function(){
+
+  $('#sundeck').fadeIn();
+  $('#maindeck, #lowerdeck').fadeOut();
+
+  $('#btn_sun').addClass('active');
+  $('#btn_main, #btn_low').removeClass('active');
+});
+
+$('#btn_main').on('click', function(){
+  $('#maindeck').fadeIn();
+  $('#sundeck, #lowerdeck').fadeOut();
+
+  $('#btn_main').addClass('active');
+  $('#btn_sun, #btn_low').removeClass('active');
+
+});
+
+$('#btn_low').on('click', function(){
+  $('#lowerdeck').fadeIn();
+  $('#sundeck, #maindeck').fadeOut();
+
+  $('#btn_low').addClass('active');
+  $('#btn_sun, #btn_main').removeClass('active');
+
+});

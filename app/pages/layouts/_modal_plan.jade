@@ -1,15 +1,18 @@
 div(id="plan-modal", style="display:none;")
   div#sundeck
+    .dot#sun-dot
     img(src="../images/tech/64_planimetria/planimetria_sun_or.jpg")
-  div#maindeck
+  div.unactive#maindeck
+    .dot#main-dot
     img(src="../images/tech/64_planimetria/planimetria_main_or.jpg")
-  div#lowerdeck
+  div.unactive#lowerdeck
+    .dot#low-dot
     img(src="../images/tech/64_planimetria/planimetria_lower_or.jpg")
 
   ul#intro-menu.menu-plan
     li
-      a.button.active(href="#") Sun Deck
+      a.button.active#btn_sun(href="#") Sun Deck
     li
-      a.button(href="#") Main Deck
+      a.button#btn_main(href="#") Main Deck
     li
-      a.button(href="#") Lower Deck
+      a.button#btn_low(href="#") Lower Deck
