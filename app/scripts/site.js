@@ -1,12 +1,15 @@
 Parse.initialize("AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0", "Hf6uvBRtwY4se7DKWfqckvFkpN4TktNb9PpKdXc9");
 
 
-var pinsPositions = 
+var pinsPositions =
 {
-"21":{x:20,y:30},
-"22":{x:21,y:31},
-"23":{x:60,y:40},
-"333":{x:30,y:20}
+  "11":{x:49,y:41.5},
+  "12":{x:49,y:18},
+
+  "21":{x:49,y:18},
+  "22":{x:21,y:31},
+  "23":{x:60,y:40},
+  "333":{x:30,y:20}
 }
 
 //Resize
@@ -755,7 +758,7 @@ function displayPins(pins){
       var pin = pinsArray[i].toString();
 
       var pinDeck = pin.substring(0,1);
-      
+
       console.log(pin,pinDeck, pinsPositions[pin].x,pinsPositions[pin].y);
           switch(parseInt(pinDeck)){
             case 1:
@@ -769,11 +772,11 @@ function displayPins(pins){
             break;
         }
     }
-    
+
 
 }
 function displayDeck(deck){
-     
+
     switch(parseInt(deck)){
         case 1:
             $('#sundeck').fadeIn();
@@ -835,5 +838,5 @@ function planSetup(){
       $('#btn_low').addClass('active');
       $('#btn_sun, #btn_main').removeClass('active');
 
-    }); 
+    });
 }
