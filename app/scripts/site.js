@@ -177,20 +177,10 @@ $(document).ready(function() {
     planSetup();
     getPlanPins();
 
-    $(document).keydown(function(e) {
-    switch(e.which) {
-        case 83: // up
-            logout();
-        break;
-        case 65:
-            login("equinoxe","3qu1n0x3");
-        break;
-    }
-    //e.preventDefault(); // prevent the default action (scroll / move caret)
-});
+
     //login forn
     $("#login-form").find(".btn").click(function(e){
-
+        e.stopPropagation();
         var username = $("#login-username").val();
         var password = $("#login-password").val();
 
@@ -200,7 +190,7 @@ $(document).ready(function() {
 
   $(".section .slide a.button").click(function(e){
     e.preventDefault();
-
+    e.stopPropagation();
     var selection = $(this).attr("href");
     var section = selection.substring(1, 2);
     var slide = selection.substring(2);
@@ -301,7 +291,9 @@ $(document).ready(function() {
         }
     };
 
-    $('a#closeMenu').click(function(){
+    $('a#closeMenu').click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
         $.sidr("close");
     });
 
@@ -312,7 +304,7 @@ function createLanding(){
         anchors:['home','yacht', 'outside','bimini','fly', 'stern'],
         resize: false,
         autoScrolling: true,
-        scrollOverflow: true,
+        scrollOverflow: false,
         scrollBar: false,
         responsive: 480,
         loopTop: false,
@@ -721,6 +713,7 @@ function activateButtons(){
 function preventPrivateSection(){
     $("a.prevent").click(function(e){
         e.preventDefault();
+        e.stopPropagation();
         var link = $(this).attr("href");
         checkUser(loginUrl,link)
     })
@@ -730,6 +723,7 @@ function preventPrivateSection(){
 function logoutButton(){
     $("li.logout a").click(function(e){
         e.preventDefault();
+        e.stopPropagation();
         console.log("logout button clicked")
         logout();
         location.reload();
@@ -788,6 +782,7 @@ function cleanPins(){
 
 function getPlanPins(){
     $(document).on('click', 'a.see-plan', function(e) {
+         e.stopPropagation();
             var deck = $(this).attr("data-deck");
             var pins = $(this).attr("data-pin");
             displayPins(pins);
@@ -856,8 +851,9 @@ function displayDeck(deck){
 // Switch Plan
 function planSetup(){
 
-    $('#btn_sun').on('click', function(){
-
+    $('#btn_sun').on('click', function(e){
+        e.preventDefault();
+         e.stopPropagation();
       $('#sundeck').fadeIn();
       $('#maindeck, #lowerdeck').fadeOut();
 
@@ -865,7 +861,9 @@ function planSetup(){
       $('#btn_main, #btn_low').removeClass('active');
     });
 
-    $('#btn_main').on('click', function(){
+    $('#btn_main').on('click', function(e){
+        e.preventDefault();
+         e.stopPropagation();
       $('#maindeck').fadeIn();
       $('#sundeck, #lowerdeck').fadeOut();
 
@@ -874,11 +872,14 @@ function planSetup(){
 
     });
 
-    $('#btn_low').on('click', function(){
+    $('#btn_low').on('click', function(e){
+        e.preventDefault();
+         e.stopPropagation();
       $('#lowerdeck').fadeIn();
       $('#sundeck, #maindeck').fadeOut();
 
       $('#btn_low').addClass('active');
+       e.stopPropagation();
       $('#btn_sun, #btn_main').removeClass('active');
 
     });
