@@ -2,34 +2,34 @@
     border-style none
 
     top 50%
-    
+
 .fp-controlArrow.fp-next
     background url("/images/sprite/next_arrow.svg")
     border-width 0
     border-color #fff
-    width 42px 
+    width 42px
     height 42px
 .fp-controlArrow.fp-prev
     background url("/images/sprite/prev_arrow.svg")
     border-width 0
     border-color #fff
-    width 42px 
+    width 42px
     height 42px
 .fp-controlArrow.fp-next:hover, .fp-controlArrow.fp-prev:hover
     opacity 0.7
-    
-.fp-controlArrow
-    
-    width 42px 
-    height 42px 
-    border-radius 0
-    padding 0 
-    margin 0 
 
-#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span 
+.fp-controlArrow
+
+    width 42px
+    height 42px
+    border-radius 0
+    padding 0
+    margin 0
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span
     background white
-    
-#fp-nav ul li a span, .fp-slidesNav ul li a span 
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span
     top: 2px
     left: 2px
     width: 8px
@@ -39,5 +39,12 @@
     border-radius: 50%
     position: absolute
     z-index: 1
-    
 
+
++below(480px)
+
+  .fp-slidesNav
+    margin 0 !important
+    position absolute
+    left 11px
+    bottom 10px
