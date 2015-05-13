@@ -71,6 +71,8 @@ enquire.register("screen and (max-width:480px)", {
     match : function() {
         console.log("match mobile");
         checkPage("mobile");
+        
+
     },
     unmatch : function() {
         console.log("unmatch mobile");
@@ -307,6 +309,7 @@ function createLanding(){
         scrollOverflow: false,
         scrollBar: false,
         responsive: 480,
+
         loopTop: false,
         loopHorizontal: false,
         slidesNavigation: true,
@@ -323,6 +326,14 @@ function createLanding(){
                     hmenu.removeClass('fast-hide');
                 }
 
+
+        },
+        afterRender: function(){
+            console.log("test");
+           $(".fp-section").height("auto")
+           $(".fp-section").css("minHeight",$( window ).height()+"px")
+           $(".fp-tableCell").height($( window ).height())
+           $(".fp-tableCell").css("padding","100px 0")
 
         },
         onLeave: function(index, nextIndex, direction){
@@ -353,36 +364,14 @@ function hasFullPage(page){
 
     });
 }
-function webSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){
-      homeSlides();
 
-      createLanding();
-
-    });
-}
-function mobileSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){
-        homeSlides();
-
-        createLanding();
-
-    });
-}
 
 
 function checkPage(size){
     hidePrivateSection();
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
-
-        if (size == "web"){
-            webSlide();
-
-        }else if (size == "mobile"){
-           mobileSlide();
-
-        }
+        createLanding();
 
 
 

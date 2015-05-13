@@ -199,8 +199,10 @@ section.center
             font-size 2em
             margin .1em
         p
-            font-size rem(18px)
-            line-height rem(20px)
+            
+            font-size rem(13px)
+            line-height rem(14px)
+            
             letter-spacing 1px
             font-weight 300
             margin 0
@@ -263,6 +265,9 @@ section.center
 
 +below(480px)
     .fp-controlArrow
+        top auto
+        bottom 5px
+    .fp-slidesNav.bottom
         display none !important
     .slide.mobile-slide
         display inline-block
@@ -273,7 +278,6 @@ section.center
 
 
 +above(480px)
-    // Hamburger
     a#simple-menu
       padding 14px
 
@@ -351,8 +355,8 @@ section.center
                 // font-size rem(105px)
                 // line-height rem(93px)
             p
-              font-size rem(13px)
-              line-height rem(14px)
+              font-size rem(18px)
+              line-height rem(20px)
         div.main-text.home
             position relative
             column(8/12)
