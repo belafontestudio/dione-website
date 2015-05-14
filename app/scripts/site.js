@@ -99,6 +99,16 @@ enquire.register("screen and (max-width:1280px)", {
         })
       });
 
+      $('#dropdown-selector-cab').hover(function() {
+        $('#dropdown-menu-cab').stop().fadeIn( "slow", function() {
+          //$("#m20").css("color","light-blue !important");
+        })
+      }, function(){
+        $('#dropdown-menu-cab').stop().fadeOut( "slow", function() {
+          // Animation complete.
+        })
+      });
+
 
     }
 
