@@ -6,10 +6,15 @@
     .center
       .scroll
         ul#anchor-menu
-          li
-            a.item#m1(data-menuanchor="specs",href="#specs") Specs
-          li
-            a.item#m2(data-menuanchor="range",href="#range") The Range Of Roam
-          li
-            a.item#m3(data-menuanchor="ample",href="#ample") Ample Power
-          
+          li#dropdown-selector
+            a.item#m20
+              | Sections 
+              i.fa.fa-caret-down 
+            ul#dropdown-menu(style="display:none")
+              li
+                a.item#m1(data-menuanchor="specs",href="#specs") Specs
+              li
+                a.item#m2(data-menuanchor="range",href="#range") The Range Of Roam
+              li
+                a.item#m3(data-menuanchor="ample",href="#ample") Ample Power
+              

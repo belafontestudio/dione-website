@@ -6,8 +6,13 @@
     .center
       .scroll
         ul#anchor-menu
-          li
-            a.item#m1(data-menuanchor="events",href="#events") Events
-          li
-            a.item#m2(data-menuanchor="formal",href="#formal") Formal
+          li#dropdown-selector
+            a.item#m20
+              | Sections 
+              i.fa.fa-caret-down 
+            ul#dropdown-menu(style="display:none")
+              li
+                a.item#m1(data-menuanchor="events",href="#events") Events
+              li
+                a.item#m2(data-menuanchor="formal",href="#formal") Formal
           

@@ -6,14 +6,19 @@
     .center
       .scroll
         ul#anchor-menu
-          li
-            a.item#m1(data-menuanchor="lifeonboard",href="#lifeonboard") Life on Board
-          li
-            a.item#m2(data-menuanchor="ondeck",href="#ondeck") On Deck
-          li
-            a.item#m3(data-menuanchor="cabins",href="#cabins") Cabins
-          li
-            a.item#m4(data-menuanchor="mingle",href="#mingle") Room to Mingle
-          li
-            a.item#m5(data-menuanchor="tendersandtoys",href="#tendersandtoys") Tenders & toys
+          li#dropdown-selector
+            a.item#m20
+              | Sections 
+              i.fa.fa-caret-down 
+            ul#dropdown-menu(style="display:none")
+              li
+                a.item#m1(data-menuanchor="lifeonboard",href="#lifeonboard") Life on Board
+              li
+                a.item#m2(data-menuanchor="ondeck",href="#ondeck") On Deck
+              li
+                a.item#m3(data-menuanchor="cabins",href="#cabins") Cabins
+              li
+                a.item#m4(data-menuanchor="mingle",href="#mingle") Room to Mingle
+              li
+                a.item#m5(data-menuanchor="tendersandtoys",href="#tendersandtoys") Tenders & toys
             

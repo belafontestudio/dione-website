@@ -6,16 +6,21 @@
     .center
       .scroll
         ul#anchor-menu
-          li
-            a.item#m1(data-menuanchor="logbook",href="#logbook") Home
-          li
-            a.item#m2(data-menuanchor="comfortandsafety",href="#comfortandsafety") Comfort
-          li
-            a.item#m3(data-menuanchor="standards",href="#standards") Highest Standards
-          li
-            a.item#m4(data-menuanchor="homefromhome",href="#homefromhome") Home from Home
-          li
-            a.item#m5(data-menuanchor="cruising",href="#cruising") Cruising Destinations
-          li
-            a.item#m6(data-menuanchor="crew",href="#crew") Crew
-          
+          li#dropdown-selector
+            a.item#m20
+              | Sections 
+              i.fa.fa-caret-down 
+            ul#dropdown-menu(style="display:none")
+              li
+                a.item#m1(data-menuanchor="logbook",href="#logbook") Home
+              li
+                a.item#m2(data-menuanchor="comfortandsafety",href="#comfortandsafety") Comfort
+              li
+                a.item#m3(data-menuanchor="standards",href="#standards") Highest Standards
+              li
+                a.item#m4(data-menuanchor="homefromhome",href="#homefromhome") Home from Home
+              li
+                a.item#m5(data-menuanchor="cruising",href="#cruising") Cruising Destinations
+              li
+                a.item#m6(data-menuanchor="crew",href="#crew") Crew
+              

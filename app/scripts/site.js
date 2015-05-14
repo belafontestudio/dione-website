@@ -7,23 +7,23 @@ var pinsPositions =
   "11":{x:49,y:41.5},
   "12":{x:49,y:53.5},
   "16":{x:49,y:31.5},
-  
+
   "122":{x:49,y:41.5},
-  
+
   "21":{x:49,y:18},
   "22":{x:49,y:41},
   "24":{x:49,y:49},
   "241":{x:45,y:31},
-  
+
   "25":{x:51,y:34},
   "26":{x:45,y:65},
   "27":{x:53,y:65},
   "220":{x:49,y:50},
   "221":{x:49,y:41},
-  
+
   "222":{x:49,y:41},
-  
-  
+
+
   "31":{x:48.5,y:6.2},
   "32":{x:53.5,y:43},
   "33":{x:43,y:57},
@@ -32,18 +32,18 @@ var pinsPositions =
   "35":{x:43,y:50},
   "36":{x:43,y:67.5},
   "37":{x:53,y:67.5},
-  
+
   "38":{x:43,y:44.5},
   "39":{x:43,y:52.7},
   "310":{x:43,y:60.7},
   "311":{x:53.5,y:52},
   "312":{x:54.5,y:60.6},
   "313":{x:54.5,y:63},
-  
+
   "315":{x:48.5,y:20},
 
 
-  
+
 
 }
 
@@ -63,6 +63,37 @@ var registerUrl = "/register.html";
 checkPrivatePage();
 
 
+
+enquire.register("screen and (max-width:1280px)", {
+
+    // OPTIONAL
+    // If supplied, triggered when a media query matches.
+    match : function() {
+
+      // DROPDOWN
+
+      $('#dropdown-selector').hover(function() {
+        $('#dropdown-menu').stop().fadeIn( "slow", function() {
+          $("#m20").css("color","light-blue !important");
+        })
+      }, function(){
+        $('#dropdown-menu').stop().fadeOut( "slow", function() {
+          // Animation complete.
+        })
+      });
+
+    },
+    unmatch : function() {
+      $('#dropdown-selector').hover(function() {
+        // Do nothing
+      }, function(){
+        $('#dropdown-menu').stop().fadeIn( "slow", function() {
+          // Animation complete.
+        })
+      });
+    }
+
+});
 
 
 enquire.register("screen and (max-width:480px)", {
@@ -95,7 +126,7 @@ enquire.register("screen and (max-width:600px)", {
         $('#lowerdeck > img').attr('src', '../images/tech/64_planimetria/planimetria_lower.jpg');
         pinsPositions =
           {
-            
+
             "11":{x:40,y:47.5}, //
             "12":{x:51,y:47.5}, //
             "16":{x:49,y:31.5},
@@ -150,23 +181,23 @@ enquire.register("screen and (max-width:600px)", {
               "11":{x:49,y:41.5},
               "12":{x:49,y:53.5},
               "16":{x:49,y:31.5},
-              
+
               "122":{x:49,y:41.5},
-              
+
               "21":{x:49,y:18},
               "22":{x:49,y:41},
               "24":{x:49,y:49},
               "241":{x:45,y:31},
-              
+
               "25":{x:51,y:34},
               "26":{x:45,y:65},
               "27":{x:53,y:65},
               "220":{x:49,y:50},
               "221":{x:49,y:41},
-              
+
               "222":{x:49,y:41},
-              
-              
+
+
               "31":{x:48.5,y:6.2},
               "32":{x:53.5,y:43},
               "33":{x:43,y:57},
@@ -175,14 +206,14 @@ enquire.register("screen and (max-width:600px)", {
               "35":{x:43,y:50},
               "36":{x:43,y:67.5},
               "37":{x:53,y:67.5},
-              
+
               "38":{x:43,y:44.5},
               "39":{x:43,y:52.7},
               "310":{x:43,y:60.7},
               "311":{x:53.5,y:52},
               "312":{x:54.5,y:60.6},
               "313":{x:54.5,y:63},
-              
+
               "315":{x:48.5,y:20},
 
 
@@ -588,17 +619,6 @@ function homeSlides(){
 }
 
 
-// DROPDOWN
-
-$('#dropdown-selector').hover(function() {
-  $('#dropdown-menu').stop().fadeIn( "slow", function() {
-    $("#m20").css("color","light-blue !important");
-  })
-}, function(){
-  $('#dropdown-menu').stop().fadeOut( "slow", function() {
-    // Animation complete.
-  })
-});
 
 
 

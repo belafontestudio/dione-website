@@ -576,30 +576,32 @@ section.center
 +below(1280px)
   #m20
     display block
+    margin-bottom 5px
 
   #dropdown-menu
-    display block !important
+    display none //!important
+    li
+      display block !important
+      padding 5px 0
 
 //ok
 +above(1280px)
   // Dropdown menu
   #m20
-    cursor pointer
-    display inline-block
+    display none
 
+  #dropdown-selector
 
   #dropdown-menu
-    border-top 1px solid white
+
     padding 0
-    padding-left 30px
-    padding-top 5px
     position absolute
-    top 21px
+    top 0
     left 0
     -webkit-box-shadow: none
     -moz-box-shadow none
     box-shadow none
-    display none
+    display block !important
     //opacity 0
     //visibility hidden
     -webkit-transiton opacity 0.2s
@@ -607,6 +609,8 @@ section.center
     -ms-transition opacity 0.2s
     -o-transition opacity 0.2s
     -transition opacity 0.2s
+    li
+      display inline-block
 
 
 

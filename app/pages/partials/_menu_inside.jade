@@ -6,21 +6,19 @@
     .center
       .scroll
         ul#anchor-menu
-          li
-            a.item#m1(data-menuanchor="inside",href="#inside") Inside
-          li
-            a.item#m2(data-menuanchor="dining",href="#dining") Dining Room
-          li
-            a.item#m3(data-menuanchor="living",href="#living") Living Room
-          li
-            a.item#m4(data-menuanchor="maindeck",href="#maindeck") Main Deck
-          //Dropdown with cabin
           li#dropdown-selector
             a.item#m20
-              | Cabins 
+              | Sections 
               i.fa.fa-caret-down 
-            //
             ul#dropdown-menu(style="display:none")
+              li
+                a.item#m1(data-menuanchor="inside",href="#inside") Inside
+              li
+                a.item#m2(data-menuanchor="dining",href="#dining") Dining Room
+              li
+                a.item#m3(data-menuanchor="living",href="#living") Living Room
+              li
+                a.item#m4(data-menuanchor="maindeck",href="#maindeck") Main Deck
               li
                 a.item#m6(data-menuanchor="owner",href="#owner") Owner's Cabin
               li
@@ -29,8 +27,7 @@
                 a.item#m7(data-menuanchor="guest",href="#guest") Guest Cabins
               li
                 a.item#m8(data-menuanchor="office",href="#office") Office & Pilot Cabin
-          //
-          li
-            a.item#m9(data-menuanchor="bathrooms",href="#bathrooms") Bathrooms
-          li
-            a.item#m10(data-menuanchor="inside-crew",href="#inside-crew") Crew
+              li
+                a.item#m9(data-menuanchor="bathrooms",href="#bathrooms") Bathrooms
+              li
+                a.item#m10(data-menuanchor="inside-crew",href="#inside-crew") Crew
