@@ -89,11 +89,7 @@ div#landing-menu
             letter-spacing 1.8px
             text-transform uppercase
             text-decoration none
-            &.active, &:hover, &:active
-                color light-blue
-                border-bottom 1px solid light-blue
-            &.active
-                border-bottom 1px solid light-blue
+
 
 div#sidr
     z-index 4
@@ -580,13 +576,21 @@ section.center
     border-bottom 1px solid rgba(0,0,0,0) !important
 
   #dropdown-menu
-    background-color rgba(157, 210, 204, .5)
+    background-color light-blue
     padding 5px
     width 250px
     display none //!important
     li
       display block !important
       padding 5px 0
+      
+    a
+      color white
+      &.active, &:hover, &:active
+          color whitesmoke
+          border-bottom 1px solid light-blue
+      &.active
+          border-bottom 1px solid light-blue
 
 //ok
 +above(1280px)
@@ -594,7 +598,7 @@ section.center
   #m20
     display none
 
-  #dropdown-selector
+
 
   #dropdown-menu
 
@@ -615,6 +619,12 @@ section.center
     -transition opacity 0.2s
     li
       display inline-block
+    a
+      &.active, &:hover, &:active
+          color light-blue
+          border-bottom 1px solid light-blue
+      &.active
+          border-bottom 1px solid light-blue
 
 
 
