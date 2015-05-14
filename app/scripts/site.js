@@ -64,6 +64,9 @@ checkPrivatePage();
 
 
 
+
+
+
 enquire.register("screen and (max-width:1280px)", {
 
     // OPTIONAL
@@ -82,15 +85,21 @@ enquire.register("screen and (max-width:1280px)", {
         })
       });
 
+
+
     },
     unmatch : function() {
       $('#dropdown-selector').hover(function() {
-        // Do nothing
+        $('#dropdown-menu').stop().fadeIn( "slow", function() {
+          //$("#m20").css("color","light-blue !important");
+        })
       }, function(){
         $('#dropdown-menu').stop().fadeIn( "slow", function() {
           // Animation complete.
         })
       });
+
+
     }
 
 });
