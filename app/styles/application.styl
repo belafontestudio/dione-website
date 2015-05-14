@@ -163,6 +163,7 @@ a#simple-menu
 
 section.center
 
+
     ul#anchor-menu
         column(8/12)
         shift(2/12)
@@ -296,13 +297,13 @@ section.center
         center(100%, 80px)
 
         .center
-            overflow hidden
+
             padding 0
             .scroll
 
                 width 100%
             ul
-                display inline-block
+                display block
     section.center
         center(100%, 80px)
 
@@ -320,7 +321,13 @@ section.center
 
 +above(480px)
     .scroll
-        display block
+      display: block
+      width: 400px
+
+
+      ul
+        width 400%
+
     div#landing-menu
         center(980px, 0px)
         ul#anchor-menu
@@ -568,10 +575,10 @@ section.center
 
 +below(1280px)
   #m20
-    display none
+    display block
 
   #dropdown-menu
-    display inline-block !important
+    display block !important
 
 //ok
 +above(1280px)
