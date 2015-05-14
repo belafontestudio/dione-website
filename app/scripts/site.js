@@ -187,6 +187,12 @@ $(document).ready(function() {
         break;
     }
     //e.preventDefault(); // prevent the default action (scroll / move caret)
+
+
+  
+
+
+
 });
     //login forn
     $("#login-form").find(".btn").click(function(e){

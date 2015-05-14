@@ -14,9 +14,13 @@
   box-shadow none
   padding 0
   background white
+  #plan-modal > div
+    //transform rotate(90deg) scale(1.1)
+    //align(both)
   img
-    max-width 90%
+    max-width 100%
     align(both)
+
 
   div.unactive
     display none
@@ -111,13 +115,15 @@
 
 // MOBILE
 
-+below(480px)
-  #plan-modal > div
-    transform rotate(90deg) scale(1.1)
-    position relative
-    bottom -50%
+
+
 
 +below(600px)
+  // #plan-modal > div
+  //   //    transform rotate(90deg)
+  //      position relative
+  //   //     bottom -50%
+  //   //
   .menu-plan li
     display block !important
 
@@ -126,4 +132,3 @@
     font-size 12px !important
     padding 5px 10px !important
     line-height 22px !important
-    
