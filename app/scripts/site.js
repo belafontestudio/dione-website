@@ -71,6 +71,8 @@ enquire.register("screen and (max-width:480px)", {
     match : function() {
         console.log("match mobile");
         checkPage("mobile");
+        
+
     },
     unmatch : function() {
         console.log("unmatch mobile");
@@ -177,6 +179,7 @@ $(document).ready(function() {
     planSetup();
     getPlanPins();
 
+<<<<<<< HEAD
     $(document).keydown(function(e) {
     switch(e.which) {
         case 83: // up
@@ -194,9 +197,12 @@ $(document).ready(function() {
 
 
 });
+=======
+
+>>>>>>> origin/ott-dev
     //login forn
     $("#login-form").find(".btn").click(function(e){
-
+        e.stopPropagation();
         var username = $("#login-username").val();
         var password = $("#login-password").val();
 
@@ -206,7 +212,7 @@ $(document).ready(function() {
 
   $(".section .slide a.button").click(function(e){
     e.preventDefault();
-
+    e.stopPropagation();
     var selection = $(this).attr("href");
     var section = selection.substring(1, 2);
     var slide = selection.substring(2);
@@ -307,7 +313,9 @@ $(document).ready(function() {
         }
     };
 
-    $('a#closeMenu').click(function(){
+    $('a#closeMenu').click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
         $.sidr("close");
     });
 
@@ -318,9 +326,10 @@ function createLanding(){
         anchors:['home','yacht', 'outside','bimini','fly', 'stern'],
         resize: false,
         autoScrolling: true,
-        scrollOverflow: true,
+        scrollOverflow: false,
         scrollBar: false,
         responsive: 480,
+
         loopTop: false,
         loopHorizontal: false,
         slidesNavigation: true,
@@ -337,6 +346,14 @@ function createLanding(){
                     hmenu.removeClass('fast-hide');
                 }
 
+
+        },
+        afterRender: function(){
+            console.log("test");
+           $(".fp-section").height("auto")
+           $(".fp-section").css("minHeight",$( window ).height()+"px")
+           $(".fp-tableCell").height($( window ).height())
+           $(".fp-tableCell").css("padding","100px 0")
 
         },
         onLeave: function(index, nextIndex, direction){
@@ -367,36 +384,14 @@ function hasFullPage(page){
 
     });
 }
-function webSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){
-      homeSlides();
 
-      createLanding();
-
-    });
-}
-function mobileSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){
-        homeSlides();
-
-        createLanding();
-
-    });
-}
 
 
 function checkPage(size){
     hidePrivateSection();
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
-
-        if (size == "web"){
-            webSlide();
-
-        }else if (size == "mobile"){
-           mobileSlide();
-
-        }
+        createLanding();
 
 
 
@@ -727,6 +722,7 @@ function activateButtons(){
 function preventPrivateSection(){
     $("a.prevent").click(function(e){
         e.preventDefault();
+        e.stopPropagation();
         var link = $(this).attr("href");
         checkUser(loginUrl,link)
     })
@@ -736,6 +732,7 @@ function preventPrivateSection(){
 function logoutButton(){
     $("li.logout a").click(function(e){
         e.preventDefault();
+        e.stopPropagation();
         console.log("logout button clicked")
         logout();
         location.reload();
@@ -794,6 +791,7 @@ function cleanPins(){
 
 function getPlanPins(){
     $(document).on('click', 'a.see-plan', function(e) {
+         e.stopPropagation();
             var deck = $(this).attr("data-deck");
             var pins = $(this).attr("data-pin");
             displayPins(pins);
@@ -862,8 +860,9 @@ function displayDeck(deck){
 // Switch Plan
 function planSetup(){
 
-    $('#btn_sun').on('click', function(){
-
+    $('#btn_sun').on('click', function(e){
+        e.preventDefault();
+         e.stopPropagation();
       $('#sundeck').fadeIn();
       $('#maindeck, #lowerdeck').fadeOut();
 
@@ -871,7 +870,9 @@ function planSetup(){
       $('#btn_main, #btn_low').removeClass('active');
     });
 
-    $('#btn_main').on('click', function(){
+    $('#btn_main').on('click', function(e){
+        e.preventDefault();
+         e.stopPropagation();
       $('#maindeck').fadeIn();
       $('#sundeck, #lowerdeck').fadeOut();
 
@@ -880,11 +881,14 @@ function planSetup(){
 
     });
 
-    $('#btn_low').on('click', function(){
+    $('#btn_low').on('click', function(e){
+        e.preventDefault();
+         e.stopPropagation();
       $('#lowerdeck').fadeIn();
       $('#sundeck, #maindeck').fadeOut();
 
       $('#btn_low').addClass('active');
+       e.stopPropagation();
       $('#btn_sun, #btn_main').removeClass('active');
 
     });
