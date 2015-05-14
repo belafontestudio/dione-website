@@ -429,7 +429,7 @@ function createLanding(){
 function checkPage(size){
     hidePrivateSection();
     var pathArray = window.location.pathname.split( '/' );
-    if (pathArray[2] == "landing.html"){
+    if (window.location.pathname == "/"){
         createLanding();
         homeSlides();
 
@@ -686,7 +686,7 @@ function login(username,password){
                 if(checkedUrl){
                     window.location = url;
                 }else{
-                    window.location = "/pages/landing.html";
+                    window.location = "/";
                 }
 
             //}

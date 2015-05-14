@@ -1,0 +1,11 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "Dione - website": {
+      "applicationId": "AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0",
+      "masterKey": "qItQmJex7vk86bCxBcUzufngcDHzb2V55XwWjRCG"
+    }
+  }
+}
