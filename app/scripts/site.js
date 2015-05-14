@@ -63,7 +63,44 @@ var registerUrl = "/register.html";
 checkPrivatePage();
 
 
+enquire.register("screen and (min-width:1280px)", {
 
+    // OPTIONAL
+    // If supplied, triggered when a media query matches.
+    match : function() {
+
+      // DROPDOWN
+
+      $('#dropdown-selector-cab').hover(function() {
+        $('#dropdown-menu-cab').stop().fadeIn( "slow", function() {
+          //$("#m20").css("color","light-blue !important");
+        })
+      }, function(){
+        $('#dropdown-menu-cab').stop().fadeOut( "slow", function() {
+          // Animation complete.
+        })
+      });
+
+
+
+    },
+    unmatch : function() {
+
+
+      $('#dropdown-selector-cab').hover(function() {
+        $('#dropdown-menu-cab').stop().fadeIn( "slow", function() {
+          //$("#m20").css("color","light-blue !important");
+        })
+      }, function(){
+        $('#dropdown-menu-cab').stop().fadeIn( "slow", function() {
+          // Animation complete.
+        })
+      });
+
+
+    }
+
+});
 
 
 
@@ -99,15 +136,7 @@ enquire.register("screen and (max-width:1280px)", {
         })
       });
 
-      $('#dropdown-selector-cab').hover(function() {
-        $('#dropdown-menu-cab').stop().fadeIn( "slow", function() {
-          //$("#m20").css("color","light-blue !important");
-        })
-      }, function(){
-        $('#dropdown-menu-cab').stop().fadeOut( "slow", function() {
-          // Animation complete.
-        })
-      });
+
 
 
     }
