@@ -3,44 +3,84 @@ Parse.initialize("AKSUebdxKe82i1QR4WZZTXpog6pWMo5FEAo3dPk0", "Hf6uvBRtwY4se7DKWf
 
 var pinsPositions =
 {
-  "11":{x:49,y:41.5},
-  "12":{x:49,y:53.5},
+  // // >600px - orizzontal
+  // "11":{x:49,y:41.5},
+  // "12":{x:49,y:53.5},
+  // "16":{x:49,y:31.5},
+  //
+  // "122":{x:49,y:41.5},
+  //
+  // "21":{x:49,y:18},
+  // "22":{x:49,y:41},
+  // "24":{x:49,y:49},
+  // "241":{x:45,y:31},
+  //
+  // "25":{x:51,y:34},
+  // "26":{x:45,y:65},
+  // "27":{x:53,y:65},
+  // "220":{x:49,y:50},
+  // "221":{x:49,y:41},
+  //
+  // "222":{x:49,y:41},
+  //
+  //
+  // "31":{x:48.5,y:6.2},
+  // "32":{x:53.5,y:43},
+  // "33":{x:43,y:57},
+  // "331":{x:53.5,y:57},
+  // "34":{x:43,y:41},
+  // "35":{x:43,y:50},
+  // "36":{x:43,y:67.5},
+  // "37":{x:53,y:67.5},
+  //
+  // "38":{x:43,y:44.5},
+  // "39":{x:43,y:52.7},
+  // "310":{x:43,y:60.7},
+  // "311":{x:53.5,y:52},
+  // "312":{x:54.5,y:60.6},
+  // "313":{x:54.5,y:63},
+  //
+  // "315":{x:48.5,y:20},
+
+
+  // <600px - vertical
+  "11":{x:40,y:47.5}, //
+  "12":{x:51,y:47.5}, //
   "16":{x:49,y:31.5},
 
   "122":{x:49,y:41.5},
 
-  "21":{x:49,y:18},
-  "22":{x:49,y:41},
-  "24":{x:49,y:49},
-  "241":{x:45,y:31},
+  "21":{x:15,y:47.5}, //
+  "22":{x:39,y:47.7}, //
+  "24":{x:49,y:48},   //
+  "241":{x:29,y:52},  //
 
-  "25":{x:51,y:34},
-  "26":{x:45,y:65},
-  "27":{x:53,y:65},
-  "220":{x:49,y:50},
-  "221":{x:49,y:41},
+  "25":{x:36,y:45.5}, //
+  "26":{x:68,y:52},
+  "27":{x:68,y:43},
+  "220":{x:49,y:48},  //
+  "221":{x:39,y:48},  //
 
-  "222":{x:49,y:41},
+  "222":{x:39,y:48},  //
 
 
-  "31":{x:48.5,y:6.2},
-  "32":{x:53.5,y:43},
-  "33":{x:43,y:57},
-  "331":{x:53.5,y:57},
-  "34":{x:43,y:41},
-  "35":{x:43,y:50},
-  "36":{x:43,y:67.5},
-  "37":{x:53,y:67.5},
+  "31":{x:1,y:48}, //
+  "32":{x:41.5,y:42}, //
+  "33":{x:57.5,y:54},  //
+  "331":{x:57.5,y:42},  //
+  "34":{x:40,y:55}, //
+  "35":{x:50,y:55},  //
+  "36":{x:68,y:53.5}, //
+  "37":{x:68,y:43.5}, //
 
-  "38":{x:43,y:44.5},
-  "39":{x:43,y:52.7},
-  "310":{x:43,y:60.7},
-  "311":{x:53.5,y:52},
-  "312":{x:54.5,y:60.6},
-  "313":{x:54.5,y:63},
+  "38":{x:52,y:42.5}, //
+  "39":{x:61,y:42.5}, //
+  "310":{x:64,y:42.5}, //
+  "311":{x:43,y:54.7},  //
+  "312":{x:52.5,y:54.7},  //
+  "313":{x:61,y:54.7},   //
 
-  "315":{x:48.5,y:20},
-
+  "315":{x:14.5,y:49},  //
 
 
 
@@ -52,6 +92,21 @@ $( window ).resize(function() {
   $.modal.resize();
   if($(".fullpage-wrapper")[0]){
     $.fn.fullpage.reBuild();
+  }
+
+  //change plan image
+  if($(window).width() <= 600){
+
+    $('#sundeck > img').attr('src', '../images/tech/64_planimetria/planimetria_sun.jpg');
+    $('#maindeck > img').attr('src', '../images/tech/64_planimetria/planimetria_main.jpg');
+    $('#lowerdeck > img').attr('src', '../images/tech/64_planimetria/planimetria_lower.jpg');
+
+  }else{
+
+    $('#sundeck > img').attr('src', '../images/tech/64_planimetria/planimetria_sun_or.jpg');
+    $('#maindeck > img').attr('src', '../images/tech/64_planimetria/planimetria_main_or.jpg');
+    $('#lowerdeck > img').attr('src', '../images/tech/64_planimetria/planimetria_lower_or.jpg');
+
   }
 
 });
@@ -71,7 +126,7 @@ enquire.register("screen and (max-width:480px)", {
     match : function() {
         console.log("match mobile");
         checkPage("mobile");
-        
+
 
     },
     unmatch : function() {
@@ -179,7 +234,7 @@ $(document).ready(function() {
     planSetup();
     getPlanPins();
 
-<<<<<<< HEAD
+
     $(document).keydown(function(e) {
     switch(e.which) {
         case 83: // up
@@ -192,14 +247,12 @@ $(document).ready(function() {
     //e.preventDefault(); // prevent the default action (scroll / move caret)
 
 
-  
+
 
 
 
 });
-=======
 
->>>>>>> origin/ott-dev
     //login forn
     $("#login-form").find(".btn").click(function(e){
         e.stopPropagation();
